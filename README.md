@@ -1,4 +1,12 @@
 vim-configs
 ===========
 安装步骤：
-curl -s http://server/path/script.sh | bash /dev/stdin
+
+# mkdir vim config dir
+mkdir -p ~/.vim
+
+# git clone vim configs
+git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
+
+# execute install script
+bash ~/.vim/install.sh

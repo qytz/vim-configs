@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-# mkdir vim config dir
-mkdir -p ~/.vim
-
-# git clone vim configs
-git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
-
 #git clone vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+mkdir ~/.vim/.backup
+mkdir ~/.vim/.swap
+mkdir ~/.vim/.undofiles
 
 # link vimrc file
 ln -s ~/.vim/vimrc ~/.vimrc
