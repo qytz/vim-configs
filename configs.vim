@@ -253,6 +253,9 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
+" auto add tags file updirs
+:set tags=tags;/
+
 " File encoding
 set fileencoding=utf8
 " detect file encodings list below:

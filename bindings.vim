@@ -125,20 +125,8 @@ noremap <silent> <enter> :call WriteBuffer()<CR>
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-" cscope key bindings
-nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
-nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-
 nnoremap <F2> :GundoToggle<CR>
 nnoremap <silent> <F3> :YRShow<CR>
 nnoremap <F4> :NERDTreeToggle<cr>
-nnoremap <F6> :call Do_CsTag()<cr>
 nnoremap <F7> :BufExplorer<cr>
 nnoremap <F8> :TagbarToggle<cr>

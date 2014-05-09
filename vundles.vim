@@ -19,10 +19,10 @@ Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/YankRing.vim'
-"Bundle 'klen/python-mode'
-Bundle 'ervandew/supertab'
+Bundle 'klen/python-mode'
+"Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DrawIt'
 " need python suport
-"Bundle 'SirVer/ultisnips'
+Bundle 'SirVer/ultisnips'
 Bundle 'gregsexton/MatchTag'
 
