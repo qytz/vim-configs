@@ -7,6 +7,8 @@ if has("autocmd")
     "autocmd BufWritePost *.[ch] call UpdateCscope(expand('<afile>'))
 endif
 
+set cscopetag
+
 let s:cscopepath = "./"
 function! LoadCscope()
     let db = findfile("cscope.out", ".;")
@@ -22,11 +24,13 @@ function! UpdateCscope()
     if s:cscopepath != "./"
         execute 'cd' fnameescape(s:cscopepath)
     endif
-    "!cscope -RUb
+    !cscope -RUb<CR>
+    cscope kill -1
+    call LoadCscope()
 endfunction
 
 " cscope key bindings
-nnoremap <F6> :call UpdateCscope()<cr>
+nnoremap <F6> :call UpdateCscope()<CR><CR><CR>
 map <F12> :call LoadCscope()<CR>
 nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
