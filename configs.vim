@@ -307,3 +307,5 @@ autocmd BufReadPost fugitive://*
 
 let yankring_manual_clipboard_check=0
 
+" avoid hit-enter prompts caused by file messages
+set shortmess=a

@@ -14,23 +14,30 @@ function! LoadCscope()
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
         let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
+        if (s:cscopepath == "")
+            let s:cscopepath = "./"
+        endif
+        execute 'cd' fnameescape(s:cscopepath)
+        exe "cs add " . db
+        "exe "cs add " . db . " " . s:cscopepath
         set nocscopeverbose " suppress 'duplicate connection' error
-        exe "cs add " . db . " " . s:cscopepath
         set cscopeverbose
     endif
 endfunction
 
 function! UpdateCscope()
-    if s:cscopepath != "./"
-        execute 'cd' fnameescape(s:cscopepath)
-    endif
-    !cscope -RUb<CR>
-    cscope kill -1
-    call LoadCscope()
+    "if s:cscopepath != "./"
+    "    execute 'cd' fnameescape(s:cscopepath)
+    "endif
+    silent !cscope -RUb
+    cscope reset
+    "cscope kill -1
+    "call LoadCscope()
+    :redraw!
 endfunction
 
 " cscope key bindings
-nnoremap <F6> :call UpdateCscope()<CR><CR><CR>
+nnoremap <F6> :call UpdateCscope()<CR>
 map <F12> :call LoadCscope()<CR>
 nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
