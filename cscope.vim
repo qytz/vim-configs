@@ -17,19 +17,19 @@ function! LoadCscope()
         if (s:cscopepath == "")
             let s:cscopepath = "./"
         endif
-        execute 'cd' fnameescape(s:cscopepath)
-        exe "cs add " . db
-        "exe "cs add " . db . " " . s:cscopepath
+        exe "cs add " . db . " " . s:cscopepath
         set nocscopeverbose " suppress 'duplicate connection' error
         set cscopeverbose
     endif
 endfunction
 
 function! UpdateCscope()
-    "if s:cscopepath != "./"
-    "    execute 'cd' fnameescape(s:cscopepath)
-    "endif
+    let s:rootdir=getcwd()
+    if s:cscopepath != "./"
+        execute 'cd' fnameescape(s:cscopepath)
+    endif
     silent !cscope -RUb
+    execute "cd " . s:rootdir
     cscope reset
     "cscope kill -1
     "call LoadCscope()
