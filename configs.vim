@@ -208,6 +208,7 @@ endfunction
 " Text Format
 " ---------------
 "default indent settings
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
