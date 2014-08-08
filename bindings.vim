@@ -133,3 +133,4 @@ nnoremap <silent> <F3> :YRShow<CR>
 nnoremap <F4> :NERDTreeToggle<cr>
 nnoremap <F7> :BufExplorer<cr>
 nnoremap <F8> :TagbarToggle<cr>
+set pastetoggle=<F9>
