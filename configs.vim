@@ -211,9 +211,11 @@ endfunction
 " Text Format
 " ---------------
 "default indent settings
+set expandtab
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set tabstop=4
+set smarttab
 set autoindent
 
 " ---------------
@@ -255,6 +257,9 @@ set formatoptions-=o "dont continue comments when pushing o/O
 set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
+
+" auto add tags file updirs
+:set tags=tags;/
 
 " File encoding
 set fileencoding=utf8
@@ -306,3 +311,5 @@ autocmd BufReadPost fugitive://*
 
 let yankring_manual_clipboard_check=0
 
+" avoid hit-enter prompts caused by file messages
+set shortmess=a

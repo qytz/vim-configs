@@ -54,25 +54,25 @@ nnoremap <leader>, :e#<CR>
 "   ---|----
 "   g3 | g4
 "   -------
-nmap <silent> gh :wincmd h<CR>
-nmap <silent> gj :wincmd j<CR>
-nmap <silent> gk :wincmd k<CR>
-nmap <silent> gl :wincmd l<CR>
+"nmap <silent> gh :wincmd h<CR>
+"nmap <silent> gj :wincmd j<CR>
+"nmap <silent> gk :wincmd k<CR>
+"nmap <silent> gl :wincmd l<CR>
 " Upper left window
-nmap <silent> g1 :wincmd t<CR>
+"nmap <silent> g1 :wincmd t<CR>
 " Upper right window
-nmap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
+"nmap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
 " Lower left window
-nmap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
+"nmap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
 " Lower right window
-nmap <silent> g4 :wincmd b<CR>
+"nmap <silent> g4 :wincmd b<CR>
 
 " Previous Window
-nmap <silent> gp :wincmd p<CR>
+"nmap <silent> gp :wincmd p<CR>
 " Equal Size Windows
-nmap <silent> g= :wincmd =<CR>
+"nmap <silent> g= :wincmd =<CR>
 " Swap Windows
-nmap <silent> gx :wincmd x<CR>
+"nmap <silent> gx :wincmd x<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
 nmap <silent> <leader>hs :split<Bar>:wincmd j<CR>
@@ -120,25 +120,17 @@ function WriteBuffer()
 endfunction
 noremap <silent> <enter> :call WriteBuffer()<CR>
 
+" j,k just move one screen line
+nnoremap j gj
+nnoremap k gk
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-" cscope key bindings
-nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
-nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-
 nnoremap <F2> :GundoToggle<CR>
 nnoremap <silent> <F3> :YRShow<CR>
 nnoremap <F4> :NERDTreeToggle<cr>
-nnoremap <F6> :call Do_CsTag()<cr>
 nnoremap <F7> :BufExplorer<cr>
 nnoremap <F8> :TagbarToggle<cr>
+set pastetoggle=<F9>
