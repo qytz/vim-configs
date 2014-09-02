@@ -26,3 +26,6 @@ Bundle 'vim-scripts/DrawIt'
 Bundle 'SirVer/ultisnips'
 Bundle 'gregsexton/MatchTag'
 
+" solarized colorscheme
+Bundle 'altercation/vim-colors-solarized'
+

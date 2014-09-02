@@ -202,6 +202,16 @@ function! s:Median(nums)
     endif
 endfunction
 
+" colorscheme
+"syntax enable
+set background=dark
+colorscheme wombat
+
+" set guifont
+if has("gui_running")
+    set guifont=Droid\ Sans\ Mono\ 14
+    "set guifontwide=Droid\ Sans\ Mono\ 14
+endif
 
 
 " ---------------
