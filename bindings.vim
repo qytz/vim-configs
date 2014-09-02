@@ -128,9 +128,4 @@ nnoremap k gk
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-nnoremap <F2> :GundoToggle<CR>
-nnoremap <silent> <F3> :YRShow<CR>
-nnoremap <F4> :NERDTreeToggle<cr>
-nnoremap <F7> :BufExplorer<cr>
-nnoremap <F8> :TagbarToggle<cr>
 set pastetoggle=<F9>

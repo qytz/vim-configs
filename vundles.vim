@@ -18,12 +18,16 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mhinz/vim-startify'
+Plugin 'bling/vim-airline'
 Bundle 'vim-scripts/YankRing.vim'
-"Bundle 'klen/python-mode'
-"Bundle 'ervandew/supertab'
+Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DrawIt'
 " need python suport
+Bundle 'klen/python-mode'
 Bundle 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Bundle 'gregsexton/MatchTag'
 
 " solarized colorscheme
