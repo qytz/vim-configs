@@ -34,6 +34,9 @@ set t_Co=256
 "hide buffers when not displayed
 set hidden
 
+"line is too long
+set colorcolumn=100
+
 "statusline setup
 set statusline =%#identifier#
 set statusline+=[%t]    "tail of the filename
