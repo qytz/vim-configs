@@ -31,11 +31,18 @@ let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
 "let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 "let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 
+" airline
+let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+
 " syntastic
 let g:syntastic_check_on_wq = 0
 
 " YankRing
 nnoremap <silent> <F3> :YRShow<CR>
+let g:yankring_replace_n_pkey=''
 
 " gundo
 nnoremap <F2> :GundoToggle<CR>
