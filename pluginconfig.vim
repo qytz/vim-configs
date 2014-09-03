@@ -35,7 +35,8 @@ let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#whitespace#enabled = 1
 
 " syntastic
 let g:syntastic_check_on_wq = 0
@@ -52,5 +53,4 @@ nnoremap <F4> :NERDTreeToggle<cr>
 
 " buffer explorer
 nnoremap <F7> :BufExplorer<cr>
-
 
