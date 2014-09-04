@@ -26,10 +26,10 @@ let g:startify_custom_header =
 " UltiSnips
 let g:UltiSnipsSnippetDirectories=['UltiSnips']
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
-"let g:UltiSnipsExpandTrigger = '<Tab>'
-"let g:UltiSnipsListSnippets = '<C-Tab>'
-"let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+let g:UltiSnipsExpandTrigger = '<Tab>'
+let g:UltiSnipsListSnippets = '<C-Tab>'
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 
 " airline
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
