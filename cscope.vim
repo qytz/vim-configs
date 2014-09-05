@@ -14,7 +14,7 @@ set cscopetag
 
 let s:cscopepath = "./"
 function! LoadCscope()
-    if !has("cscope") || !g:cscope_loaded
+    if !has("cscope") || g:cscope_loaded
         return
     endif
     let db = findfile("cscope.out", ".;")
