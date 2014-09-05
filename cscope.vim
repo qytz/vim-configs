@@ -1,8 +1,6 @@
 " We need to setup the function that reset cscope.
 "You could define this in your vimrc instead.
 
-let g:cscope_loaded = 0
-
 if has("autocmd")
     "autocmd VimEnter * call LoadCscope()
     autocmd BufRead * call LoadCscope()
@@ -14,7 +12,7 @@ set cscopetag
 
 let s:cscopepath = "./"
 function! LoadCscope()
-    if !has("cscope") || g:cscope_loaded
+    if cscope_connection()
         return
     endif
     let db = findfile("cscope.out", ".;")
@@ -31,9 +29,6 @@ function! LoadCscope()
 endfunction
 
 function! UpdateCscope()
-    if !has("cscope")
-        return
-    endif
     let s:rootdir=getcwd()
     if s:cscopepath != "./"
         execute 'cd' fnameescape(s:cscopepath)
