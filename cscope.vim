@@ -1,8 +1,11 @@
 " We need to setup the function that reset cscope.
 "You could define this in your vimrc instead.
 
+let g:cscope_loaded = 0
+
 if has("autocmd")
-    autocmd VimEnter * call LoadCscope()
+    "autocmd VimEnter * call LoadCscope()
+    autocmd BufRead * call LoadCscope()
     "autocmd BufAdd *.[ch] call FindGtags(expand('<afile>'))
     "autocmd BufWritePost *.[ch] call UpdateCscope(expand('<afile>'))
 endif
@@ -11,19 +14,26 @@ set cscopetag
 
 let s:cscopepath = "./"
 function! LoadCscope()
+    if !has("cscope") || !g:cscope_loaded
+        return
+    endif
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
         let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
         if (s:cscopepath == "")
             let s:cscopepath = "./"
         endif
-        exe "cs add " . db . " " . s:cscopepath
         set nocscopeverbose " suppress 'duplicate connection' error
+        silent exe "cs add " . db . " " . s:cscopepath
         set cscopeverbose
+        let g:cscope_loaded = 1
     endif
 endfunction
 
 function! UpdateCscope()
+    if !has("cscope")
+        return
+    endif
     let s:rootdir=getcwd()
     if s:cscopepath != "./"
         execute 'cd' fnameescape(s:cscopepath)
