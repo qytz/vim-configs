@@ -24,6 +24,9 @@ Plugin 'bling/vim-airline'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DrawIt'
+
+" html & css quick editing
+Bundle 'mattn/emmet-vim'
 " need python suport
 Bundle 'klen/python-mode'
 Bundle 'SirVer/ultisnips'
