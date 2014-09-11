@@ -15,7 +15,7 @@ let g:pymode_options = 1
 let g:pymode_lint_on_write = 0
 
 " supertab
-"let g:SuperTabMappingBackward = "<C-S-t>"
+"let g:SuperTabMappingBackward = "<S-Tab>"
 let g:SuperTabMappingForward = "<S-Tab>"
 let g:SuperTabMappingTabLiteral = "<tab>"
 

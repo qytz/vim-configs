@@ -135,6 +135,14 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
+" completation
+" let Vim's popup menu like other IDE(ref: VimTip1228)
+set completeopt+=longest
+set completeopt-=preview
+" close popup menu window when leave insert mode
+autocmd InsertLeave * if pumvisible()==0|pclose|endif
+" select current item when press <CR>
+inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
 
 " ---------------
 " Plugin settings
