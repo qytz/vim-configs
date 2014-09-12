@@ -3,7 +3,8 @@
 
 if has("autocmd")
     "autocmd VimEnter * call LoadCscope()
-    autocmd BufRead * call LoadCscope()
+    autocmd BufRead * silent! lcd %:p:h
+    autocmd BufReadPost * call LoadCscope()
     "autocmd BufAdd *.[ch] call FindGtags(expand('<afile>'))
     "autocmd BufWritePost *.[ch] call UpdateCscope(expand('<afile>'))
 endif
@@ -11,17 +12,20 @@ endif
 set cscopetag
 
 let s:cscopepath = "./"
+
 function! LoadCscope()
     if cscope_connection()
-        return
+        cscope kill
     endif
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
+        "let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
         let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
-        if (s:cscopepath == "")
-            let s:cscopepath = "./"
-        endif
+        let cwd = getcwd()
+        " get relative path
+        let s:cscopepath = substitute(s:cscopepath, l:cwd . "/" , "", "")
         set nocscopeverbose " suppress 'duplicate connection' error
+        "cs add dbfile prepand_path
         silent exe "cs add " . db . " " . s:cscopepath
         set cscopeverbose
         let g:cscope_loaded = 1
