@@ -15,7 +15,7 @@ let s:cscopepath = "./"
 
 function! LoadCscope()
     if cscope_connection()
-        cscope kill
+        silent exe "cscope kill -1"
     endif
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
