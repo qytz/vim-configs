@@ -24,6 +24,8 @@ Plugin 'bling/vim-airline'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DrawIt'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'rking/ag.vim'
 
 " html & css quick editing
 Bundle 'mattn/emmet-vim'
