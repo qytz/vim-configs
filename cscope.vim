@@ -20,7 +20,10 @@ function! LoadCscope()
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
         "let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
-        let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
+        let l:n = match(db, "/cscope.out$")
+        if (l:n != 0 && l:n != -1)
+            let s:cscopepath = strpart(db, 0, n)
+        endif
         let cwd = getcwd()
         " get relative path
         let s:cscopepath = substitute(s:cscopepath, l:cwd . "/" , "", "")
