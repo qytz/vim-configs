@@ -38,3 +38,7 @@ Bundle 'gregsexton/MatchTag'
 " solarized colorscheme
 Bundle 'altercation/vim-colors-solarized'
 
+
+Bundle 'vim-scripts/DoxyGen-Syntax'
+Bundle 'vim-scripts/DoxygenToolkit.vim'
+

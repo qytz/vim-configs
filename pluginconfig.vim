@@ -54,3 +54,6 @@ nnoremap <F4> :NERDTreeToggle<cr>
 " buffer explorer
 nnoremap <F7> :BufExplorer<cr>
 
+" DoxygenToolkit.vim
+let g:DoxygenToolkit_authorName = 'lenny'
+let g:DoxygenToolkit_versionString = '1.0'
