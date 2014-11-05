@@ -6,7 +6,7 @@ let g:tagbar_autofocus = 1
 let g:tagbar_singleclick = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_previewwin_pos = "aboveleft"
-let g:tagbar_autopreview = 1
+let g:tagbar_autopreview = 0
 
 " pymode
 let g:pymode_warnings = 1
