@@ -32,6 +32,7 @@ let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 
 " airline
+let g:airline_theme = 'light'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
@@ -40,6 +41,9 @@ let g:airline#extensions#whitespace#enabled = 1
 
 " syntastic
 let g:syntastic_check_on_wq = 0
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
 
 " YankRing
 nnoremap <silent> <F3> :YRShow<CR>

@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-surround'
@@ -20,25 +20,25 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-startify'
-Plugin 'bling/vim-airline'
+Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/DrawIt'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'rking/ag.vim'
+Bundle 'Shougo/neocomplete.vim'
 
 " html & css quick editing
 Bundle 'mattn/emmet-vim'
 " need python suport
 Bundle 'klen/python-mode'
 Bundle 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'gregsexton/MatchTag'
 
 " solarized colorscheme
 Bundle 'altercation/vim-colors-solarized'
 
-
+" for Doxygen
 Bundle 'vim-scripts/DoxyGen-Syntax'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
-
