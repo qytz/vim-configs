@@ -42,7 +42,11 @@ function! UpdateCscope()
     endif
     silent !cscope -RUb
     execute "cd " . s:rootdir
-    cscope reset
+    if cscope_connection()
+        cscope reset
+    else
+        call LoadCscope()
+    endif
     "cscope kill -1
     "call LoadCscope()
     :redraw!
