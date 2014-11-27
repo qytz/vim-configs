@@ -173,3 +173,8 @@ set foldlevel=10
 
 " avoid hit-enter prompts caused by file messages
 set shortmess=a
+
+" autocmds
+source ~/.vim/config/autocmds.vim
+" key bindings
+source ~/.vim/config/bindings.vim

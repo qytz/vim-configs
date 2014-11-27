@@ -26,12 +26,14 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/DrawIt'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'rking/ag.vim'
-Bundle 'Shougo/neocomplete.vim'
+"Bundle 'Shougo/neocomplete.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 " html & css quick editing
 Bundle 'mattn/emmet-vim'
 " need python suport
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
+
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'gregsexton/MatchTag'
