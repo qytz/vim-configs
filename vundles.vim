@@ -36,6 +36,9 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'gregsexton/MatchTag'
 
+" qt develop
+Bundle 'peterhoeg/vim-qml'
+
 " solarized colorscheme
 Bundle 'altercation/vim-colors-solarized'
 
