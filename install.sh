@@ -3,7 +3,11 @@
 cd ~/
 if [ -e ~/.vim ]
 then
-    mv ~/.vim ~/.vim.`date "+%Y%m%d%H%M%S"`
+    mv ~/.vim ~/.vim.bak.`date "+%Y%m%d%H%M%S"`
+fi
+if [ -e ~/.vimrc ]
+then
+    mv ~/.vimrc ~/.vimrc.bak.`date "+%Y%m%d%H%M%S"`
 fi
 git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
 
@@ -25,4 +29,7 @@ vim +PluginInstall +qall
 
 # build ycm plugin
 bash ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
-cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.ycm_extra_conf.py
+if [ ! -e ~/.ycm_extra_conf.py ]
+then
+    cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.ycm_extra_conf.py
+fi

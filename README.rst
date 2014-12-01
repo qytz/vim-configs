@@ -13,6 +13,18 @@ vim-configs
 
     wget https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh -O - | bash -
 
+编译 YCM 插件
+
+.. code-block:: bash
+
+    # build ycm plugin
+    bash ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+    if [ ! -e ~/.ycm_extra_conf.py ]
+    then
+        cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.ycm_extra_conf.py
+    fi
+
+
 使用说明
 --------------
 
