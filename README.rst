@@ -18,7 +18,9 @@ vim-configs
 .. code-block:: bash
 
     # build ycm plugin
-    bash ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+    pushd ~/.vim/bundle/YouCompleteMe/
+    bash ./install.sh --clang-completer
+    popd
     if [ ! -e ~/.ycm_extra_conf.py ]
     then
         cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.ycm_extra_conf.py
