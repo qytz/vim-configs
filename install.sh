@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+cd ~/
+if [ -e ~/.vim ]
+then
+    mv ~/.vim ~/.vim.`date "+%Y%m%d%H%M%S"`
+fi
+git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
+
 #git clone vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 

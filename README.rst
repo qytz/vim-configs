@@ -3,16 +3,15 @@ vim-configs
 安装步骤
 ---------------
 
-#. mkdir vim config dir
-#. git clone vim configs
-#. execute install script
+.. code-block:: bash
 
-.. code-block:: c
+    curl https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh | bash -
 
-    cd ~/
-    rm -rf ~/.vim
-    git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
-    bash ~/.vim/install.sh
+或者
+
+.. code-block:: bash
+
+    wget https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh -O - | bash -
 
 使用说明
 --------------
