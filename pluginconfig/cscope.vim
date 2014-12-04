@@ -14,11 +14,11 @@ set cscopetag
 let s:cscopepath = "./"
 
 function! LoadCscope()
-    if cscope_connection()
-        silent exe "cscope kill -1"
-    endif
     let db = findfile("cscope.out", ".;")
     if (!empty(db))
+        if cscope_connection()
+            silent exe "cscope kill -1"
+        endif
         "let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
         let l:n = match(db, "/cscope.out$")
         if (l:n != 0 && l:n != -1)
