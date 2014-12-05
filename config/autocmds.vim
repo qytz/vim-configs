@@ -33,7 +33,7 @@ if has("autocmd")
                 \   exe "normal! g`\"" |
                 \ endif
 
-    autocmd BufWritePre *.c,*.h,*.py,*.pyw,*.vim,*.js,*.cpp silent! :StripTrailingWhiteSpace
+    "autocmd BufWritePre *.c,*.h,*.py,*.pyw,*.vim,*.js,*.cpp silent! :StripTrailingWhiteSpace
 
     autocmd FileType python setlocal et sta sw=4 sts=4
     autocmd FileType python setlocal foldmethod=indent

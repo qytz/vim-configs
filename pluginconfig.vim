@@ -56,9 +56,6 @@ nnoremap <F2> :GundoToggle<CR>
 " NerdTree
 nnoremap <F4> :NERDTreeToggle<cr>
 
-" buffer explorer
-nnoremap <F7> :BufExplorer<cr>
-
 " DoxygenToolkit.vim
 let g:DoxygenToolkit_authorName = 'lenny'
 let g:DoxygenToolkit_versionString = '1.0'
@@ -69,3 +66,20 @@ let g:DoxygenToolkit_versionString = '1.0'
 source ~/.vim/pluginconfig/cscope.vim
 " youcompleteme settings
 source ~/.vim/pluginconfig/youcompleteme.vim
+
+" vim-nerdtree-tabs
+map <F4> <plug>NERDTreeTabsToggle<CR>
+
+" vim-ctrlspace
+let g:ctrlspace_default_mapping_key="<Leader><Space>"
+
+" vim-expand-region
+"map J <Plug>(expand_region_expand)
+"map K <Plug>(expand_region_shrink)
+
+" vim-better-whitespace
+autocmd FileType c,h,py,pyw,vim,js,cpp autocmd BufWritePre <buffer> StripWhitespace
+
+" vim-javascript
+let g:javascript_enable_domhtmlcss=1
+
