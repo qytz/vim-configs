@@ -38,3 +38,6 @@ vim-configs
 * 插件相关的配置在 pluginconfig.vim 中，部分配置内容较多的插件在 pluginconfig 中
   配置，并在 pluginconfig.vim 中引入。
 
+更多插件
+-----------
+可访问 `vim awesom <http://vimawesome.com/>`_ 获取更多插件。
