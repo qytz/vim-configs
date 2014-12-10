@@ -2,9 +2,12 @@
 "You could define this in your vimrc instead.
 
 if has("autocmd")
+    "autocmd BufRead * silent! lcd %:p:h
+
     "autocmd VimEnter * call LoadCscope()
-    autocmd BufRead * silent! lcd %:p:h
-    autocmd BufReadPost * call LoadCscope()
+    "autocmd BufReadPost * call LoadCscope()
+    autocmd BufEnter * call LoadCscope()
+    "autocmd BufWinEnter * call LoadCscope()
     "autocmd BufAdd *.[ch] call FindGtags(expand('<afile>'))
     "autocmd BufWritePost *.[ch] call UpdateCscope(expand('<afile>'))
 endif
@@ -14,25 +17,26 @@ set cscopetag
 let s:cscopepath = "./"
 
 function! LoadCscope()
+    silent! lcd %:p:h
     let db = findfile("cscope.out", ".;")
-    if (!empty(db))
-        if cscope_connection()
-            silent exe "cscope kill -1"
-        endif
-        "let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
-        let l:n = match(db, "/cscope.out$")
-        if (l:n != 0 && l:n != -1)
-            let s:cscopepath = strpart(db, 0, n)
-        endif
-        let cwd = getcwd()
-        " get relative path
-        let s:cscopepath = substitute(s:cscopepath, l:cwd . "/" , "", "")
-        set nocscopeverbose " suppress 'duplicate connection' error
-        "cs add dbfile prepand_path
-        silent exe "cs add " . db . " " . s:cscopepath
-        set cscopeverbose
-        let g:cscope_loaded = 1
+    "if (!empty(db))
+    if cscope_connection()
+        silent exe "cscope kill -1"
     endif
+    "let s:cscopepath = strpart(db, 0, match(db, "/cscope.out$"))
+    let l:n = match(db, "/cscope.out$")
+    if (l:n != 0 && l:n != -1)
+        let s:cscopepath = strpart(db, 0, n)
+    endif
+    let tcwd = getcwd()
+    " get relative path
+    let s:cscopepath = substitute(s:cscopepath, l:tcwd . "/" , "", "")
+    set nocscopeverbose " suppress 'duplicate connection' error
+    "cs add dbfile prepand_path
+    silent exe "cs add " . db . " " . s:cscopepath
+    set cscopeverbose
+    let g:cscope_loaded = 1
+    "endif
 endfunction
 
 function! UpdateCscope()
