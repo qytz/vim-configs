@@ -45,7 +45,8 @@ set laststatus=2
 " colorscheme
 "syntax enable
 set background=dark
-colorscheme wombat
+colorscheme solarized
+let g:solarized_termcolors=256
 
 " set guifont
 if has("gui_running")
