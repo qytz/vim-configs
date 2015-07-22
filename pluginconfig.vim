@@ -83,3 +83,5 @@ autocmd FileType c,h,py,pyw,vim,js,cpp autocmd BufWritePre <buffer> StripWhitesp
 " vim-javascript
 let g:javascript_enable_domhtmlcss=1
 
+" rust-doc
+let g:rust_doc#downloaded_rust_doc_dir = '~/.vim/rust-1.0.0-i686-unknown-linux-gnu/rust-docs'

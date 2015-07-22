@@ -23,8 +23,8 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/DrawIt'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'rking/ag.vim'
-"Bundle 'Shougo/neocomplete.vim'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'Shougo/neocomplete.vim'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'kshenoy/vim-signature'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ntpeters/vim-better-whitespace'
@@ -38,6 +38,8 @@ Bundle 'tpope/vim-git'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 
+" RestructuredText
+Bundle 'vim-scripts/vst_with_syn'
 " rust
 Bundle 'rust-lang/rust.vim'
 Bundle 'timonv/vim-cargo'
@@ -69,3 +71,7 @@ Bundle 'altercation/vim-colors-solarized'
 " for Doxygen
 Bundle 'vim-scripts/DoxyGen-Syntax'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
+
+" one step above 'nocompatible' mode: a universal set of defaults that (hopefully) everyone can agree on.
+Bundle 'tpope/vim-sensible'
+
