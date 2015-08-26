@@ -1,6 +1,8 @@
-" -----------------------------
-" Backups, Tmp Files, and Undo
-" -----------------------------
+" Note: This line MUST come before any <leader> mappings
+"let mapleader=","
+nnoremap s <Nop>
+let mapleader = "s"
+
 set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.swap
@@ -9,14 +11,9 @@ if v:version >= 703
     "undo settings
     set undodir=~/.vim/.undofiles
     set undofile
-
     "set colorcolumn=+1 "mark the ideal max text width
 endif
 
-
-" ---------------
-" UI
-" ---------------
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 set number      "show line numbers
@@ -31,33 +28,21 @@ set ttymouse=xterm2
 if exists('$TMUX')
     set term=screen-256color
 endif
-"tell the term has 256 colors
 set t_Co=256
 
 "hide buffers when not displayed
 set hidden
 
-"line is too long
-"set colorcolumn=100
-
+set colorcolumn=100
 set cursorline
-
 " always show statusline
 set laststatus=2
-
-" colorscheme
-"syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
 
 " set guifont
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ 14
     "set guifontwide=Droid\ Sans\ Mono\ 14
 endif
-
 
 " ---------------
 " Text Format
@@ -80,10 +65,6 @@ set hlsearch
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc"
 
-
-" ---------------
-" Behaviors
-" ---------------
 "turn on syntax highlighting
 syntax on
 "allow backspacing over everything in insert mode
@@ -98,6 +79,7 @@ set linebreak   "wrap lines at convenient points
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
+set foldlevel=10
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
@@ -124,11 +106,98 @@ set fileencodings=utf-8,gb18030,default
 " Vim支持在编辑文本时自动折行，但默认对中文折行的支持并不理想，建议添加如下两个设置：
 " 如遇Unicode值大于255的文本，不必等到空格再折行。
 set formatoptions+=m
-" " 合并两行中文时，不在中间加空格：
+" 合并两行中文时，不在中间加空格：
 set formatoptions+=B
 
 " save before jump to other buf
 set autowriteall
+
+" let Vim's popup menu like other IDE(ref: VimTip1228)
+set completeopt+=longest
+set completeopt-=preview
+" close popup menu window when leave insert mode
+autocmd InsertLeave * if pumvisible()==0|pclose|endif
+" select current item when press <CR>
+inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
+
+" avoid hit-enter prompts caused by file messages
+set shortmess=a
+
+if has("autocmd")
+    " No formatting on o key newlines
+    autocmd BufNewFile,BufEnter * set formatoptions-=o
+
+    " No more complaining about untitled documents
+    autocmd FocusLost silent! :wa
+
+    " When editing a file, always jump to the last cursor position.
+    " This must be after the uncompress commands.
+    autocmd BufReadPost *
+                \ if line("'\"") > 1 && line ("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
+
+    autocmd FileType python setlocal et sta sw=4 sts=4
+    autocmd FileType python setlocal foldmethod=indent
+
+    "spell check when writing commit logs
+    autocmd filetype svn,*commit* setlocal spell
+endif
+
+" colorscheme
+set background=dark
+"silent! colorscheme solarized
+try
+    let g:solarized_termcolors=256
+    "let g:solarized_termtrans=1
+    colorscheme solarized
+catch
+    colorscheme desert
+endtry
+
+" Fixes common typos
+command! W w
+command! Q q
+
+" Make line completion easier.
+imap <C-l> <C-x><C-l>
+
+" Use ; for : in normal and visual mode, less keystrokes
+nnoremap ; :
+vnoremap ; :
+" double percentage sign in command mode is expanded
+" to directory of current file - http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Yank entire buffer with gy
+nmap gy :%y+<cr>
+
+" Make Y behave like other capital commands.
+nnoremap Y y$
+
+" Just to beginning and end of lines easier. From http://vimbits.com/bits/16
+noremap H ^
+noremap L $
+
+nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
+
+" Quickly switch to last buffer
+nnoremap <leader>, :e#<CR>
+
+" Split window vertically or horizontally *and* switch to the new split!
+nmap <silent> <leader>hs :split<Bar>:wincmd j<CR>
+nmap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+" Close the current window
+nmap <silent> <leader>sc :close<CR>
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
+
+" Format the entire file
+nmap <leader>ff ggVG=
+
+"map Q to something useful
+noremap Q gq
 
 "visual search mappings
 function! s:VSetSearch()
@@ -140,65 +209,54 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
-" completation
-" let Vim's popup menu like other IDE(ref: VimTip1228)
-set completeopt+=longest
-set completeopt-=preview
-" close popup menu window when leave insert mode
-autocmd InsertLeave * if pumvisible()==0|pclose|endif
-" select current item when press <CR>
-inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
-
+" Writes the current buffer unless we're the in QuickFix mode.
 " ---------------
-" Plugin settings
-" ---------------
-"nerdtree settings
-let g:NERDTreeMouseMode = 2
-let g:NERDTreeWinSize = 40
-
-"dont load csapprox if we no gui support - silences an annoying warning
-if !has("gui")
-    let g:CSApprox_loaded = 1
-endif
-
-"http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-"hacks from above (the url, not jesus) to delete fugitive buffers when we
-"leave them - otherwise the buffer list gets poluted
-"
-"add a mapping on .. to view parent tree
-autocmd BufReadPost fugitive://* set bufhidden=delete
-autocmd BufReadPost fugitive://*
-            \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-            \   nnoremap <buffer> .. :edit %:h<CR> |
-            \ endif
-
-let yankring_manual_clipboard_check=0
-
-" for tmux to automatically set paste and nopaste mode at the time pasting (as
-" happens in VIM UI)
-function! WrapForTmux(s)
-  if !exists('$TMUX')
-    return a:s
-  endif
-  let tmux_start = "\<Esc>Ptmux;"
-  let tmux_end = "\<Esc>\\"
-  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+function WriteBuffer()
+    if &filetype == "qf"
+        execute "normal! \<enter>"
+    else
+        :write
+    endif
 endfunction
-let &t_SI .= WrapForTmux("\<Esc>[?2004h")
-let &t_EI .= WrapForTmux("\<Esc>[?2004l")
-function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
-endfunction
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+noremap <silent> <enter> :call WriteBuffer()<CR>
 
-set foldlevel=10
+" j,k just move one screen line
+nnoremap j gj
+nnoremap k gk
 
-" avoid hit-enter prompts caused by file messages
-set shortmess=a
+"make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
 
-" autocmds
-source ~/.vim/config/autocmds.vim
-" key bindings
-source ~/.vim/config/bindings.vim
+" Window Movement
+" Here's a visual guide for moving between window splits.
+"   4 Window Splits
+"   --------
+"   g1 | g2
+"   ---|----
+"   g3 | g4
+"   -------
+"nmap <silent> gh :wincmd h<CR>
+"nmap <silent> gj :wincmd j<CR>
+"nmap <silent> gk :wincmd k<CR>
+"nmap <silent> gl :wincmd l<CR>
+" Upper left window
+"nmap <silent> g1 :wincmd t<CR>
+" Upper right window
+"nmap <silent> g2 :wincmd b<Bar>:wincmd k<CR>
+" Lower left window
+"nmap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
+" Lower right window
+"nmap <silent> g4 :wincmd b<CR>
+
+" Previous Window
+"nmap <silent> gp :wincmd p<CR>
+" Equal Size Windows
+"nmap <silent> g= :wincmd =<CR>
+" Swap Windows
+"nmap <silent> gx :wincmd x<CR>
+
+set pastetoggle=<F2>
+nnoremap <F3> :set number!<cr>
+nnoremap <F4> :set relativenumber!<cr>
+
