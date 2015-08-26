@@ -89,5 +89,5 @@ if g:vim_clean_mode == 0
     nnoremap <space>s :Unite -quick-match buffer<cr>
 endif
 
-"source neocomplete.vim
-source ycm.vim
+"source ~/.vim/neocomplete.vim
+source ~/.vim/ycm.vim
