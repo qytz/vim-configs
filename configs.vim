@@ -1,7 +1,7 @@
 " Note: This line MUST come before any <leader> mappings
-"let mapleader=","
-nnoremap s <Nop>
-let mapleader = "s"
+let mapleader=","
+"nnoremap s <Nop>
+"let mapleader = "s"
 
 set backup
 set backupdir=~/.vim/.backup
