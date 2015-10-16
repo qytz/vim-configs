@@ -66,7 +66,7 @@ autocmd FileType c,h,py,pyw,vim,js,cpp autocmd BufWritePre <buffer> StripWhitesp
 let g:javascript_enable_domhtmlcss=1
 
 " vim-ctrlspace
-let g:ctrlspace_default_mapping_key="<Leader><Space>"
+let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 
 if g:vim_clean_mode == 0
     " pymode
