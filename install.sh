@@ -12,7 +12,8 @@ fi
 git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
 
 #git clone vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 mkdir ~/.vim/.backup
 mkdir ~/.vim/.swap
