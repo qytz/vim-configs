@@ -68,6 +68,16 @@ let g:javascript_enable_domhtmlcss=1
 " vim-ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 
+"source ~/.vim/neocomplete.vim
+source ~/.vim/ycm.vim
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>uf :<C-u>Unite -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>uy :<C-u>Unite -buffer-name=yank    history/yank<cr>
+nnoremap <leader>ub :<C-u>Unite -buffer-name=buffer  buffer<cr>
+
 if g:vim_clean_mode == 0
     " pymode
     let g:pymode_python = 'python'
@@ -89,5 +99,3 @@ if g:vim_clean_mode == 0
     nnoremap <space>s :Unite -quick-match buffer<cr>
 endif
 
-"source ~/.vim/neocomplete.vim
-source ~/.vim/ycm.vim

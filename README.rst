@@ -55,6 +55,9 @@ vim leader按键为","
 
 <C-P> ctrlp搜索
 <leader>,   已打开buffer列表
+<leader>uf  unite插入模式搜索文件
+<leader>uy  打开history/yank
+<leader>ub  已打开buffer列表
 <leader> s g c t e f i d 相应的cscope搜索
 
 <F2> toggle paste mode
