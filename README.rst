@@ -13,7 +13,7 @@ vim-configs
 
     wget https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh -O - | bash -
 
-编译 YCM 插件
+编译 YCM 插件(会自动编译，此步骤已不再需要)
 
 .. code-block:: bash
 
@@ -45,32 +45,24 @@ vim-configs
 
 DEPENDS
 ===========
-ack/ag
-cscope
-ctags
-
-build-essential
-cmake
-python-dev
-mono-xbuild
+参看requirements.txt
 
 SHORTCUTS
 ==========
 回车保存文件
 
-;   ==> ;
-gy  ==> 复制整个文件内容
-Y   ==> 复制到行尾
-H   ==> 跳到行首
-L   ==> 跳到行尾
-<leader>v   ==> 编辑vimrc
-<leader>,   ==> 切换到之前编辑的buffer
-<leader>hs  ==> split
-<leader>vs  ==> vsplit
-<leader>sc  ==> close current window
-<leader>ff  ==> 格式化整个文件
-<C-L>   ==> 清除高亮
+vim leader按键为","
 
-<leader>ca  ==> build cscope database
-<leader>ct, <leader>cs, <leader>pcs to (re-)build only ctags, cscope, or pycscope database
+<C-P> ctrlp搜索
+<leader>,   已打开buffer列表
+<leader> s g c t e f i d 相应的cscope搜索
 
+<F2> toggle paste mode
+<F3> toggle show line number
+<F4> toggle relative number
+
+<F5> connect cscope&tags
+<F6> (re)build cscope&tags
+
+<F7> toggle nerdtree
+<F8> toggle tagbar

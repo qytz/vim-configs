@@ -1,0 +1,3 @@
+# requiremets:
+cscope ctags clang cmake python-dev
+build-essential libclang-dev libncurses-dev libboost-dev libz-dev cmake xz-utils
