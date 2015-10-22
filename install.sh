@@ -29,6 +29,6 @@ vim +PluginInstall +qall
 # cd ~/.vim/bundle/vim-snippets/
 
 # build ycm plugin
-pushd ~/.vim/bundle/YouCompleteMe/
-./install.py--clang-completer
-popd
+#pushd ~/.vim/bundle/YouCompleteMe/
+#./install.py--clang-completer
+#popd

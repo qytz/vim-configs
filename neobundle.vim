@@ -10,6 +10,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+let g:neobundle#install_process_timeout = 1500
+
 " Use git protocol.
 let g:neobundle#types#git#default_protocol = 'git'
 
@@ -21,6 +23,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " Use neobundle standard recipes.
 NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
+NeoBundle 'Shougo/unite.vim'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
@@ -77,7 +80,15 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-ctrlspace'
-NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build' : {
+     \     'mac' : './install.sh --clang-completer --system-libclang',
+     \     'unix' : './install.sh --clang-completer --system-libclang',
+     \     'windows' : './install.sh --clang-completer --system-libclang',
+     \     'cygwin' : './install.sh --clang-completer --system-libclang'
+     \    }
+     \ }
+
 NeoBundle 'rdnetto/YCM-Generator'
 "NeoBundle 'jeaye/color_coded'
 "NeoBundle 'Shougo/neocomplete.vim'
