@@ -74,9 +74,9 @@ source ~/.vim/ycm.vim
 " Unite
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>uf :<C-u>Unite -buffer-name=files   -start-insert file<cr>
-nnoremap <leader>uy :<C-u>Unite -buffer-name=yank    history/yank<cr>
-nnoremap <leader>ub :<C-u>Unite -buffer-name=buffer  buffer<cr>
+nnoremap <leader>uf :Unite -quick-match file_rec/async<cr>
+nnoremap <leader>ug :Unite grep:.<cr>
+nnoremap <leader>ub :Unite buffer<cr>
 
 if g:vim_clean_mode == 0
     " pymode
