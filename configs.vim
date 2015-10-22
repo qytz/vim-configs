@@ -123,12 +123,17 @@ inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
 " avoid hit-enter prompts caused by file messages
 set shortmess=a
 
+" auto-save configs
+set autoread " auto-reload when the editing file updated by other program
+au FocusLost * silent! up " auto-save when lost focus
+au BufLeave * silent! up " auto-save when leave buffer
+
 if has("autocmd")
     " No formatting on o key newlines
     autocmd BufNewFile,BufEnter * set formatoptions-=o
 
     " No more complaining about untitled documents
-    autocmd FocusLost silent! :wa
+    " autocmd FocusLost silent! :wa
 
     " When editing a file, always jump to the last cursor position.
     " This must be after the uncompress commands.
