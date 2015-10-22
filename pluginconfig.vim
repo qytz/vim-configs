@@ -74,7 +74,7 @@ source ~/.vim/ycm.vim
 " Unite
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>uf :Unite -quick-match file_rec/async<cr>
+nnoremap <leader>uf :Unite -start-insert file<cr>
 nnoremap <leader>ug :Unite grep:.<cr>
 nnoremap <leader>ub :Unite buffer<cr>
 
