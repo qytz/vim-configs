@@ -69,3 +69,31 @@ vim leader按键为","
 
 <F7> toggle nerdtree
 <F8> toggle tagbar
+
+YCM相关：
+----------
+自动补全
+<leader>jd 跳转到定义，没有找到定义则跳转到声明
+<C-O> 跳回回退
+<C-i> 跳转前进
+
+snippets
+----------
+更多请参考 `vim/bundle/vim-snippets/UltiSnips/` 目录。
+
+c/c++
++++++++
+inc/Inc
+main/fun/fund
+for/fori
+st
+printf/frpintf
+def/ifndef/#if/eli
+
+cl/ns/map/vector/tp
+
+python
++++++++++
+#!/ifmain/with/for/def/defc/defs
+class/slotclass/contain/attr/desc
+
