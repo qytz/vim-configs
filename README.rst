@@ -72,6 +72,14 @@ vim leader按键为","
 
 YCM相关：
 ----------
+ycm配置文件的生成使用了rdnetto/YCM-Generator插件，在项目根目录下运行 `.vim/bundle/YCM-Generator/config_gen.py` 或者
+在项目根目录下打开vim运行:YcmGenerateConfig 或 :CCGenerateConfig。
+参考https://github.com/rdnetto/YCM-Generator：
+
+Run ./config_gen.py PROJECT_DIRECTORY, where PROJECT_DIRECTORY is the root directory of your project's build system (i.e. the one containing the root Makefile, etc.)
+
+You can also invoke it from within Vim using the :YcmGenerateConfig or :CCGenerateConfig commands to generate a config file for the current directory. These commands accept the same arguments as ./config_gen.py, but do not require the project directory to be specified (it defaults to the current working directory).
+
 自动补全
 <leader>jd 跳转到定义，没有找到定义则跳转到声明
 <C-O> 跳回回退

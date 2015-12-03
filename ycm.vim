@@ -8,7 +8,7 @@ inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDow
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " 跳转到定义处
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>    "force recomile with syntastic
+" nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>    "force recomile with syntastic
 " nnoremap <leader>lo :lopen<CR>    "open locationlist
 " nnoremap <leader>lc :lclose<CR>   "close locationlist
 inoremap <leader><leader> <C-x><C-o>
