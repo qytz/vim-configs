@@ -12,8 +12,8 @@ endif
 
 let g:neobundle#install_process_timeout = 1500
 
-" Use git protocol.
-let g:neobundle#types#git#default_protocol = 'git'
+" Use https protocol for git.
+let g:neobundle#types#git#default_protocol = 'https'
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
