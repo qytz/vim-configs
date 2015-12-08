@@ -94,6 +94,9 @@ NeoBundle 'rdnetto/YCM-Generator'
 "NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'davidhalter/jedi-vim'
 
+" rst edit
+NeoBundle 'Rykka/riv.vim'
+
 if g:vim_clean_mode == 0
     NeoBundle 'tpope/vim-surround'
     NeoBundle 'scrooloose/syntastic'
