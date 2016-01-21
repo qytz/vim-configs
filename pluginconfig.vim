@@ -71,13 +71,6 @@ let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 "source ~/.vim/neocomplete.vim
 source ~/.vim/ycm.vim
 
-" Unite
-let g:unite_source_history_yank_enable = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>uf :Unite -start-insert file<cr>
-nnoremap <leader>ug :Unite grep:.<cr>
-nnoremap <leader>ub :Unite buffer<cr>
-
 if g:vim_clean_mode == 0
     " pymode
     let g:pymode_python = 'python'
@@ -85,17 +78,5 @@ if g:vim_clean_mode == 0
     let g:pymode_trim_whitespaces = 1
     let g:pymode_options = 1
     let g:pymode_lint_on_write = 0
-
-    " supertab
-    "let g:SuperTabMappingBackward = "<S-Tab>"
-    "let g:SuperTabMappingForward = "<S-Tab>"
-    "let g:SuperTabMappingTabLiteral = "<tab>"
-
-    " rust-doc
-    let g:rust_doc#downloaded_rust_doc_dir = '~/.vim/rust-1.0.0-i686-unknown-linux-gnu/rust-docs'
-
-    nnoremap <C-p> :Unite file_rec/async<cr>
-    nnoremap <leader>ug :Unite grep:.<cr>
-    nnoremap <space>s :Unite -quick-match buffer<cr>
 endif
 
