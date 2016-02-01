@@ -28,7 +28,10 @@ set ttymouse=xterm2
 if exists('$TMUX')
     set term=screen-256color
 endif
-set t_Co=256
+
+if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
+    set t_Co=256
+endif
 
 "hide buffers when not displayed
 set hidden

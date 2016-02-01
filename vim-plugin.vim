@@ -35,6 +35,8 @@ Plug 'szw/vim-ctrlspace'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --gocode-completer'}
 Plug 'rdnetto/YCM-Generator'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'tpope/vim-fugitive'
+Plug 'int3/vim-extradite'
 
 if g:vim_clean_mode == 0
     NeoBundle 'tpope/vim-surround'
