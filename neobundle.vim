@@ -54,14 +54,15 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-ctrlspace'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'Valloric/YouCompleteMe', {
-     \ 'build' : {
-     \     'mac' : './install.sh --clang-completer --system-libclang',
-     \     'unix' : './install.sh --clang-completer --system-libclang',
-     \     'windows' : './install.sh --clang-completer --system-libclang',
-     \     'cygwin' : './install.sh --clang-completer --system-libclang'
-     \    }
-     \ }
+NeoBundle 'Valloric/YouCompleteMe'
+", {
+"     \ 'build' : {
+"     \     'mac' : './install.sh --clang-completer --system-libclang',
+"     \     'unix' : './install.sh --clang-completer --system-libclang',
+"     \     'windows' : './install.sh --clang-completer --system-libclang',
+"     \     'cygwin' : './install.sh --clang-completer --system-libclang'
+"     \    }
+"     \ }
 
 NeoBundle 'rdnetto/YCM-Generator'
 NeoBundle 'Shougo/vimproc.vim', {
