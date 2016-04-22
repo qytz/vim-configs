@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify' " show modify colum
 Plug 'kshenoy/vim-signature' " easy mark

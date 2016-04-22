@@ -28,6 +28,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'mhinz/vim-signify'   " show modify colum
 NeoBundle 'kshenoy/vim-signature'   " easy mark
@@ -78,7 +79,7 @@ if g:vim_clean_mode == 0
     NeoBundle 'tpope/vim-surround'
     NeoBundle 'scrooloose/syntastic'
     "NeoBundle 'kchmck/vim-coffee-script'
-g   "NeoBundle 'vim-ruby/vim-ruby'
+    "NeoBundle 'vim-ruby/vim-ruby'
     NeoBundle 'wting/rust.vim'
     NeoBundle 'davidhalter/jedi-vim'
     NeoBundle 'klen/python-mode'
