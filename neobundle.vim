@@ -40,6 +40,11 @@ NeoBundle 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
 NeoBundle 'gorodinskiy/vim-coloresque' " css/less/sass/html color preview for vim
 NeoBundle 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 
+" themes
+NeoBundle 'KabbAmine/yowish.vim'
+NeoBundle 'whatyouhide/vim-gotham'
+NeoBundle 'tomasr/molokai'
+
 " language highlight
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
@@ -56,10 +61,10 @@ NeoBundle 'szw/vim-ctrlspace'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'Valloric/YouCompleteMe' , {
      \ 'build' : {
-     \     'mac' : './install.sh --clang-completer --system-libclang',
-     \     'unix' : './install.sh --clang-completer --system-libclang',
-     \     'windows' : './install.sh --clang-completer --system-libclang',
-     \     'cygwin' : './install.sh --clang-completer --system-libclang'
+     \     'mac' : './install.sh --clang-completer',
+     \     'unix' : './install.sh --clang-completer',
+     \     'windows' : './install.sh --clang-completer',
+     \     'cygwin' : './install.sh --clang-completer'
      \    }
      \ }
 

@@ -13,7 +13,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " nnoremap <leader>lc :lclose<CR>   "close locationlist
 inoremap <leader><leader> <C-x><C-o>
 
-let g:ycm_python_binary_path = '/usr/bin/env python3'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/data/ycm/.ycm_extra_conf.py'
 " 不显示开启vim时检查ycm_extra_conf文件的信息
