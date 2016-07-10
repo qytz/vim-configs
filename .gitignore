@@ -6,3 +6,4 @@ bundle
 .undofiles/*
 .swap
 *.pyc
+.netrwhist
