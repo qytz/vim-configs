@@ -41,7 +41,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'szw/vim-ctrlspace'
 Plug 'fatih/vim-go'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer'}
-Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 "NeoBundle 'jeaye/color_coded'
 
