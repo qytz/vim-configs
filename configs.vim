@@ -162,6 +162,9 @@ try
 catch
     colorscheme desert
 endtry
+"colorscheme yowish
+"colorscheme molokai
+colorscheme gotham
 
 " Fixes common typos
 command! W w
