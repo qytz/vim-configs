@@ -46,7 +46,7 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'szw/vim-ctrlspace'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer'}
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
