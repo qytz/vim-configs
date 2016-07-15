@@ -48,7 +48,6 @@ Plug 'szw/vim-ctrlspace'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer'}
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-"NeoBundle 'jeaye/color_coded'
 
 if g:vim_clean_mode == 0
     Plug 'tpope/vim-surround'
