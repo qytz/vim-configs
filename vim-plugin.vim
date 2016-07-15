@@ -22,6 +22,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
+Plug 'scrooloose/syntastic'
 Plug 'Valloric/MatchTagAlways'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
