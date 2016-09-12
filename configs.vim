@@ -163,8 +163,8 @@ catch
     colorscheme desert
 endtry
 "colorscheme yowish
-"colorscheme molokai
-colorscheme gotham
+colorscheme molokai
+"colorscheme gotham
 
 " Fixes common typos
 command! W w
@@ -223,8 +223,8 @@ vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 " Writes the current buffer unless we're the in QuickFix mode.
 " ---------------
 function WriteBuffer()
-    if &filetype == "qf"
-        execute "normal! \<enter>"
+    if !&modifiable
+        execute "normal! \<CR>"
     else
         :write
     endif
