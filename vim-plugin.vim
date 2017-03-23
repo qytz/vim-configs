@@ -22,11 +22,12 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'Valloric/MatchTagAlways'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
-Plug 'EinfachToll/DidYouMean'
+"Plug 'EinfachToll/DidYouMean'
 Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
@@ -50,14 +51,17 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Chiel92/vim-autoformat'
+Plug 'godlygeek/tabular'
+
+" for python
+" Plug 'klen/python-mode'
+Plug 'davidhalter/jedi-vim'
 
 if g:vim_clean_mode == 0
     Plug 'tpope/vim-surround'
     "Plug 'kchmck/vim-coffee-script'
     "Plug 'vim-ruby/vim-ruby'
     Plug 'wting/rust.vim'
-    Plug 'davidhalter/jedi-vim'
-    Plug 'klen/python-mode'
     Plug 'Shougo/vinarise.vim'
     Plug 'terryma/vim-expand-region'
     Plug 'vim-scripts/DrawIt'
@@ -69,4 +73,3 @@ if g:vim_clean_mode == 0
 endif
 " Add plugins to &runtimepath
 call plug#end()
-
