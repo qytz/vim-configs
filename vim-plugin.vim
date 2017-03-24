@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'   " show modify colum
 Plug 'kshenoy/vim-signature'   " easy mark
 Plug 'JCLiang/vim-cscope-utils'
@@ -23,12 +23,12 @@ Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
 "Plug 'scrooloose/syntastic'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale'     " async syntastic
 Plug 'Valloric/MatchTagAlways'
-Plug 'michaeljsmith/vim-indent-object'
+" Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
-"Plug 'EinfachToll/DidYouMean'
-Plug 'AndrewRadev/splitjoin.vim'
+" Plug 'EinfachToll/DidYouMean'
+" Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
 Plug 'gorodinskiy/vim-coloresque' " css/less/sass/html color preview for vim
@@ -55,7 +55,7 @@ Plug 'godlygeek/tabular'
 
 " for python
 " Plug 'klen/python-mode'
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 if g:vim_clean_mode == 0
     Plug 'tpope/vim-surround'
