@@ -14,7 +14,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'   " show modify colum
 Plug 'kshenoy/vim-signature'   " easy mark
-Plug 'JCLiang/vim-cscope-utils'
+" Plug 'JCLiang/vim-cscope-utils'
+" for python 3 support
+Plug 'qytz/vim-cscope-utils'
 Plug 'godlygeek/csapprox'  "Make gvim-only colorschemes work transparently in terminal vim
 " themes
 Plug 'KabbAmine/yowish.vim'
