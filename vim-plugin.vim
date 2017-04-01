@@ -56,6 +56,7 @@ Plug 'godlygeek/tabular'
 " for python
 " Plug 'klen/python-mode'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'tell-k/vim-autopep8', {'for': 'python'}
 
 if g:vim_clean_mode == 0
     Plug 'tpope/vim-surround'

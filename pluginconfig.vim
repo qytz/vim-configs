@@ -1,8 +1,16 @@
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
 
-nnoremap <F7> :NERDTreeToggle<cr>
-nnoremap <F8> :TagbarToggle<cr>
+set pastetoggle=<F2>
+nnoremap <F3> :set number!<cr>
+nnoremap <F4> :set relativenumber!<cr>
+nnoremap <F5> :NERDTreeToggle<cr>
+nnoremap <F6> :TagbarToggle<cr>
+nnoremap <F7> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
+" Autoformat
+noremap <F8> :Autoformat<CR>
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+nnoremap <F9> :call call(function('ConnectCscopeDatabase'), [])<CR>
 
 let g:tagbar_sort = 0
 let g:tagbar_autofocus = 1
@@ -41,8 +49,6 @@ let g:UltiSnipsEditSplit="vertical"
 " cscope settings
 set cscopetag
 " cscope key bindings
-nnoremap <F6> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
-map <F5> :call call(function('ConnectCscopeDatabase'), [])<CR>
 nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -83,9 +89,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
+            \ "mode": "passive",
+            \ "active_filetypes": [],
+            \ "passive_filetypes": [] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
@@ -95,9 +101,6 @@ let g:syntastic_python_checkers = ['pylint']
 
 " vim-ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
-
-" Autoformat
-noremap <F9> :Autoformat<CR>
 
 "source ~/.vim/neocomplete.vim
 source ~/.vim/ycm.vim

@@ -267,7 +267,3 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Swap Windows
 "nmap <silent> gx :wincmd x<CR>
 
-set pastetoggle=<F2>
-nnoremap <F3> :set number!<cr>
-nnoremap <F4> :set relativenumber!<cr>
-
