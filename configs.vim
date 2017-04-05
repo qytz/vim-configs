@@ -222,7 +222,7 @@ vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
 " Writes the current buffer unless we're the in QuickFix mode.
 " ---------------
-function WriteBuffer()
+function! WriteBuffer()
     if !&modifiable
         execute "normal! \<CR>"
     else

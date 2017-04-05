@@ -24,8 +24,11 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
-"Plug 'scrooloose/syntastic'
+if v:version >= 800
 Plug 'w0rp/ale'     " async syntastic
+else
+Plug 'scrooloose/syntastic'
+endif
 Plug 'Valloric/MatchTagAlways'
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
