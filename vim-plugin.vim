@@ -7,6 +7,8 @@ Plug 'tpope/vim-sensible'
 Plug 'qytz/vim-cscope-utils'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+" like tagbar, but for markdown and rest etc.
+Plug 'vim-voom/VOoM'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
 " nerdcommenter should be after vim-cscope-utils, the have key map conficts
