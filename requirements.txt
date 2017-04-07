@@ -1,3 +1,7 @@
 # requiremets:
-git cscope ctags clang cmake python-dev
+git zsh cscope ctags clang cmake python-dev tmux silversearcher-ag curl
 build-essential libclang-dev libncurses-dev libboost-dev libz-dev cmake xz-utils
+
+# for synaptic check
+refer .vim/plugs/ale/doc/ale.txt
+flake8 pylint autopep...

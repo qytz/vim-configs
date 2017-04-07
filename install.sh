@@ -13,7 +13,8 @@ git clone https://github.com/lennyhbt/vim-configs.git ~/.vim
 
 #git clone vundle
 #git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+#git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir ~/.vim/.backup
 mkdir ~/.vim/.swap
@@ -21,8 +22,10 @@ mkdir ~/.vim/.undofiles
 
 # link vimrc file
 ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
 
 # install all plugins
+# vim +PluginInstall +qall
 vim +PluginInstall +qall
 
 # get all vim-snippets

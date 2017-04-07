@@ -3,6 +3,8 @@ vim-configs
 安装步骤
 ---------------
 
+**建议安装 oh-my-dot 包括了vim/zsh/pip等的配置**
+
 .. code-block:: bash
 
     curl https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh | bash -
@@ -14,18 +16,6 @@ vim-configs
     wget https://raw.githubusercontent.com/lennyhbt/vim-configs/master/install.sh -O - | bash -
 
 编译 YCM 插件(会自动编译，此步骤已不再需要)
-
-.. code-block:: bash
-
-    # build ycm plugin
-    pushd ~/.vim/bundle/YouCompleteMe/
-    bash ./install.sh --clang-completer
-    popd
-    if [ ! -e ~/.ycm_extra_conf.py ]
-    then
-        cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.ycm_extra_conf.py
-    fi
-
 
 使用说明
 --------------
@@ -54,39 +44,38 @@ SHORTCUTS
 vim leader按键为","
 
 <C-P> ctrlp搜索
-<leader>,   已打开buffer列表
-<leader>uf  unite文件列表
-<leader>ug  unite grep
-<leader>ub  unite 已打开buffer列表
+<leader>+空格    已打开buffer列表
+
 <leader> s g c t e f i d 相应的cscope搜索
 
 <F2> toggle paste mode
 <F3> toggle show line number
 <F4> toggle relative number
+<F5> toggle nerdtree
+<F6> toggle tagbar
+<F7> (re)build cscope&tags
+<F8> format code / autopep for python
 
-<F5> connect cscope&tags
-<F6> (re)build cscope&tags
+<F9> connect cscope&tags
 
-<F7> toggle nerdtree
-<F8> toggle tagbar
+:VoomToogle rest/markdown/html...   开关voom tag
+
+:PlugInstall 安装新插件
+:PlugUpdate  更新插件
 
 YCM相关：
 ----------
 ycm配置文件的生成使用了rdnetto/YCM-Generator插件，在项目根目录下运行 `.vim/bundle/YCM-Generator/config_gen.py` 或者
 在项目根目录下打开vim运行:YcmGenerateConfig 或 :CCGenerateConfig。
-参考https://github.com/rdnetto/YCM-Generator：
-
-Run ./config_gen.py PROJECT_DIRECTORY, where PROJECT_DIRECTORY is the root directory of your project's build system (i.e. the one containing the root Makefile, etc.)
-
-You can also invoke it from within Vim using the :YcmGenerateConfig or :CCGenerateConfig commands to generate a config file for the current directory. These commands accept the same arguments as ./config_gen.py, but do not require the project directory to be specified (it defaults to the current working directory).
+参考 `<https://github.com/rdnetto/YCM-Generator>`_
 
 自动补全
 <leader>jd 跳转到定义，没有找到定义则跳转到声明
 <C-O> 跳回回退
 <C-i> 跳转前进
 
-snippets
-----------
+snippets补全
+--------------
 更多请参考 `vim/bundle/vim-snippets/UltiSnips/` 目录。
 
 c/c++
