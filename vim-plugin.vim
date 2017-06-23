@@ -16,6 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'   " show modify colum
 Plug 'kshenoy/vim-signature'   " easy mark
@@ -28,8 +29,11 @@ Plug 'altercation/vim-colors-solarized'
 
 if v:version >= 800
 Plug 'w0rp/ale'     " async syntastic
+Plug 'maralla/completor.vim'
 else
 Plug 'scrooloose/syntastic'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 endif
 Plug 'Valloric/MatchTagAlways'
 " Plug 'michaeljsmith/vim-indent-object'
@@ -55,17 +59,14 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'szw/vim-ctrlspace'
-"Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-Plug 'maralla/completor.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'godlygeek/tabular'
 
 " for python
 " Plug 'klen/python-mode'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'tell-k/vim-autopep8', {'for': 'python'}
+" Plug 'tell-k/vim-autopep8', {'for': 'python'}
 
 if g:vim_clean_mode == 0
     Plug 'tpope/vim-surround'

@@ -239,6 +239,9 @@ nnoremap k gk
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
+" buffers nav
+nnoremap <C-]> :bnext<CR>
+nnoremap <C-\> :bprevious<CR>
 " Window Movement
 " Here's a visual guide for moving between window splits.
 "   4 Window Splits
