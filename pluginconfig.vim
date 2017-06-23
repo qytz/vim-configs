@@ -31,6 +31,7 @@ let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
@@ -84,26 +85,29 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
-" for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_mode_map = {
-            \ "mode": "passive",
-            \ "active_filetypes": [],
-            \ "passive_filetypes": [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint']
-" let g:syntastic_python_checkers = ['pylint', 'flake8']
+" " for syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_mode_map = {
+"             \ "mode": "passive",
+"             \ "active_filetypes": [],
+"             \ "passive_filetypes": [] }
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_checkers = ['pylint']
+" " let g:syntastic_python_checkers = ['pylint', 'flake8']
 
 " vim-ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 
 "source ~/.vim/neocomplete.vim
 source ~/.vim/ycm.vim
+
+
+let g:instant_rst_port = 8899
 
 if g:vim_clean_mode == 0
     " pymode
@@ -114,3 +118,5 @@ if g:vim_clean_mode == 0
     let g:pymode_lint_on_write = 0
 endif
 
+" let g:jedi#completions_command = "<C-Space>"
+" let g:jedi#completions_enabled = 0

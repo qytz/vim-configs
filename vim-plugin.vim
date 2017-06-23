@@ -47,6 +47,7 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
 Plug 'othree/javascript-libraries-syntax.vim',   {'for': 'javascript'}
 Plug 'Rykka/riv.vim', {'for': 'rst'}
+Plug 'Rykka/InstantRst'
 Plug 'peterhoeg/vim-qml'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -54,8 +55,9 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'szw/vim-ctrlspace'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+"Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'maralla/completor.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'godlygeek/tabular'
