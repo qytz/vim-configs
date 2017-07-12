@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
+" Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'   " show modify colum
 Plug 'kshenoy/vim-signature'   " easy mark
@@ -66,6 +66,8 @@ Plug 'godlygeek/tabular'
 " for python
 " Plug 'klen/python-mode'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
+" edit ipython notebook
+Plug 'goerz/ipynb_notedown.vim'
 " Plug 'tell-k/vim-autopep8', {'for': 'python'}
 
 if g:vim_clean_mode == 0
