@@ -9,7 +9,7 @@ nnoremap <F6> :TagbarToggle<cr>
 nnoremap <F7> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
 " Autoformat
 noremap <F8> :Autoformat<CR>
-autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+" autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 nnoremap <F9> :call call(function('ConnectCscopeDatabase'), [])<CR>
 
 let g:tagbar_sort = 0
