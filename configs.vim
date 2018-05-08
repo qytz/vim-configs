@@ -270,3 +270,15 @@ nnoremap <C-\> :bprevious<CR>
 " Swap Windows
 "nmap <silent> gx :wincmd x<CR>
 
+""" completeopt
+set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set wildmode=longest,list,full
+set wildmenu
+" open omni completion menu closing previous if open and opening new menu without changing the text
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"上下左右键的行为 会显示其他信息
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"

@@ -18,6 +18,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'   " show modify colum
 Plug 'kshenoy/vim-signature'   " easy mark
 Plug 'godlygeek/csapprox'  "Make gvim-only colorschemes work transparently in terminal vim
@@ -26,6 +27,7 @@ Plug 'KabbAmine/yowish.vim'
 Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
+Plug 'hotoo/pangu.vim'
 
 if v:version >= 800
 Plug 'w0rp/ale'     " async syntastic
@@ -65,7 +67,7 @@ Plug 'godlygeek/tabular'
 
 " for python
 " Plug 'klen/python-mode'
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
+" Plug 'davidhalter/jedi-vim', {'for': 'python'}
 " edit ipython notebook
 Plug 'goerz/ipynb_notedown.vim'
 " Plug 'tell-k/vim-autopep8', {'for': 'python'}
