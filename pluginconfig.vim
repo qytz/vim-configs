@@ -48,14 +48,14 @@ let g:UltiSnipsEditSplit="vertical"
 " cscope settings
 set cscopetag
 " cscope key bindings
-nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
-nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ss :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>st :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>se :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>si :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>sd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " vim-expand-region
 "map J <Plug>(expand_region_expand)
@@ -88,21 +88,21 @@ let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 
 "source ~/.vim/neocomplete.vim
 if v:version < 800
-source ~/.vim/ycm.vim
-" for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_mode_map = {
-            \ "mode": "passive",
-            \ "active_filetypes": [],
-            \ "passive_filetypes": [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint']
-" let g:syntastic_python_checkers = ['pylint', 'flake8']
+    source ~/.vim/ycm.vim
+    " for syntastic
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    let g:syntastic_mode_map = {
+                \ "mode": "passive",
+                \ "active_filetypes": [],
+                \ "passive_filetypes": [] }
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 0
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_python_checkers = ['pylint']
+    " let g:syntastic_python_checkers = ['pylint', 'flake8']
 endif
 
 
@@ -119,3 +119,6 @@ endif
 
 " let g:jedi#completions_command = "<C-Space>"
 " let g:jedi#completions_enabled = 0
+
+" for easymotion
+map <Leader>e <Plug>(easymotion-prefix)

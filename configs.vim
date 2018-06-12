@@ -1,5 +1,5 @@
 " Note: This line MUST come before any <leader> mappings
-let mapleader=","
+let mapleader=" "
 "nnoremap s <Nop>
 "let mapleader = "s"
 
