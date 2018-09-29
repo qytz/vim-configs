@@ -62,14 +62,15 @@ Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'szw/vim-ctrlspace'
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Chiel92/vim-autoformat'
+" Plug 'Chiel92/vim-autoformat'
 Plug 'godlygeek/tabular'
 
 " for python
 " Plug 'klen/python-mode'
 " Plug 'davidhalter/jedi-vim', {'for': 'python'}
 " edit ipython notebook
-Plug 'goerz/ipynb_notedown.vim'
+" Plug 'vyzyv/vimpyter'
+" Plug 'goerz/ipynb_notedown.vim'
 " Plug 'tell-k/vim-autopep8', {'for': 'python'}
 
 if g:vim_clean_mode == 0

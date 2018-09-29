@@ -14,6 +14,13 @@ if v:version >= 703
     "set colorcolumn=+1 "mark the ideal max text width
 endif
 
+"some stuff to get the mouse going in term
+"set mouse=a
+set ttymouse=xterm2
+
+" ---------------
+" Show & Format
+" ---------------
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 set number      "show line numbers
@@ -21,10 +28,19 @@ set number      "show line numbers
 set list
 set listchars=tab:▷\ ,trail:⋅,nbsp:⋅
 
-"some stuff to get the mouse going in term
-"set mouse=a
-set ttymouse=xterm2
-
+set colorcolumn=100
+set cursorline
+set laststatus=2 "always show statusline
+set wrap        "wrap lines
+set linebreak   "wrap lines at convenient points
+set textwidth=100   "auto newline when >100
+"set wrapmargin=2   "count columns from right
+set showmatch   "highlight marched brackets
+" set guifont
+if has("gui_running")
+    set guifont=Droid\ Sans\ Mono\ 14
+    "set guifontwide=Droid\ Sans\ Mono\ 14
+endif
 if exists('$TMUX')
     set term=screen-256color
 endif
@@ -32,20 +48,21 @@ endif
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
     set t_Co=256
 endif
+set hidden  "hide buffers when not displayed
 
-"hide buffers when not displayed
-set hidden
-
-set colorcolumn=100
-set cursorline
-" always show statusline
-set laststatus=2
-
-" set guifont
-if has("gui_running")
-    set guifont=Droid\ Sans\ Mono\ 14
-    "set guifontwide=Droid\ Sans\ Mono\ 14
-endif
+" colorscheme
+set background=dark
+"silent! colorscheme solarized
+try
+    let g:solarized_termcolors=256
+    "let g:solarized_termtrans=1
+    colorscheme solarized
+catch
+    colorscheme desert
+endtry
+"colorscheme yowish
+colorscheme molokai
+"colorscheme gotham
 
 " ---------------
 " Text Format
@@ -57,6 +74,7 @@ set softtabstop=4
 set tabstop=4
 set smarttab
 set autoindent
+set smartindent
 
 " ---------------
 " Searching
@@ -68,69 +86,75 @@ set hlsearch
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc"
 
-"turn on syntax highlighting
-syntax on
-"allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-"store lots of :cmdline history
-set history=1000
-
-set wrap        "wrap lines
-set linebreak   "wrap lines at convenient points
-
-"folding settings
+" ---------------
+" Folding settings
+" ---------------
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 set foldlevel=10
 
-set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildmode=list:longest,full
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set completeopt+=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt-=preview
 
-set formatoptions-=o "dont continue comments when pushing o/O
-
-"vertical/horizontal scroll off settings
+" ------------------------
+" vertical/horizontal scroll off settings
+" ------------------------
 set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
-" add html matchpairs
-set matchpairs+=<:>
-
-" auto add tags file updirs
-:set tags=tags;/
-
+" ------------------------
+" File formats & encoding
+" ------------------------
 " File encoding
 set fileencoding=utf8
 " detect file encodings list below:
 " gb18030 should be before UTF-8
 set fileencodings=utf-8,gb18030,default
+set formatoptions-=o "dont continue comments when pushing o/O
 " Vim支持在编辑文本时自动折行，但默认对中文折行的支持并不理想，建议添加如下两个设置：
 " 如遇Unicode值大于255的文本，不必等到空格再折行。
 set formatoptions+=m
 " 合并两行中文时，不在中间加空格：
 set formatoptions+=B
 
+
+" ------------------------
+" Auto saving & reading settings
+" ------------------------
 " save before jump to other buf
 set autowriteall
 
-" let Vim's popup menu like other IDE(ref: VimTip1228)
-set completeopt+=longest
-set completeopt-=preview
 " close popup menu window when leave insert mode
 autocmd InsertLeave * if pumvisible()==0|pclose|endif
 " select current item when press <CR>
 inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
-
-" avoid hit-enter prompts caused by file messages
-set shortmess=a
-
 " auto-save configs
 set autoread " auto-reload when the editing file updated by other program
 au FocusLost * silent! up " auto-save when lost focus
 au BufLeave * silent! up " auto-save when leave buffer
+" Fixes common typos
+command! W w
+command! Q q
 
+" ------------------------
+" Misc settings
+" ------------------------
+set shortmess=a " avoid hit-enter prompts caused by file messages
+syntax on "turn on syntax highlighting
+set backspace=indent,eol,start "allow backspacing over everything in insert mode
+set history=1000 "store lots of :cmdline history
+set matchpairs+=<:> " add html matchpairs
+set tags=tags;/ " auto add tags file updirs
+set spell spelllang=en_us,cjk
+
+" ---------------
+" Mapping & shortkeys
+" ---------------
 if has("autocmd")
     " No formatting on o key newlines
     autocmd BufNewFile,BufEnter * set formatoptions-=o
@@ -151,24 +175,6 @@ if has("autocmd")
     "spell check when writing commit logs
     autocmd filetype svn,*commit* setlocal spell
 endif
-
-" colorscheme
-set background=dark
-"silent! colorscheme solarized
-try
-    let g:solarized_termcolors=256
-    "let g:solarized_termtrans=1
-    colorscheme solarized
-catch
-    colorscheme desert
-endtry
-"colorscheme yowish
-colorscheme molokai
-"colorscheme gotham
-
-" Fixes common typos
-command! W w
-command! Q q
 
 " Make line completion easier.
 imap <C-l> <C-x><C-l>
@@ -270,10 +276,6 @@ nnoremap <C-\> :bprevious<CR>
 " Swap Windows
 "nmap <silent> gx :wincmd x<CR>
 
-""" completeopt
-set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set wildmode=longest,list,full
-set wildmenu
 " open omni completion menu closing previous if open and opening new menu without changing the text
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

@@ -8,7 +8,7 @@ nnoremap <F5> :NERDTreeToggle<cr>
 nnoremap <F6> :TagbarToggle<cr>
 nnoremap <F7> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
 " Autoformat
-noremap <F8> :Autoformat<CR>
+noremap <F8> :ALEFix<CR>
 " autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 nnoremap <F9> :call call(function('ConnectCscopeDatabase'), [])<CR>
 
@@ -120,5 +120,27 @@ endif
 " let g:jedi#completions_command = "<C-Space>"
 " let g:jedi#completions_enabled = 0
 
+" for vimpyter
+autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
+autocmd Filetype ipynb nmap <silent><Leader>j :VimpyterStartJupyter<CR>
+autocmd Filetype ipynb nmap <silent><Leader>n :VimpyterStartNteract<CR>
+
 " for easymotion
 map <Leader>e <Plug>(easymotion-prefix)
+
+
+" ALE
+let g:ale_completion_enabled = 1
+let g:ale_linters = {'python': ['flake8', 'black', 'pyls']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black'],
+\   'json': ['jq'],
+\ }
+" let g:ale_fix_on_save = 1 " Set this variable to 1 to fix files when you save them.
+let g:ale_sign_column_always = 1    " keep the sign gutter open at all times
+" let g:ale_sign_error = '>>'     " specify what text should be used for signs
+" let g:ale_sign_warning = '--'   " specify what text should be used for signs
+" for navigate between errors quickly
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
