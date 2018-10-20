@@ -42,6 +42,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+let g:ultisnips_python_style="google"
 
 " neocomplete settings
 "source ~/.vim/pluginconfig/neocomplete.vim
@@ -128,9 +129,10 @@ autocmd Filetype ipynb nmap <silent><Leader>n :VimpyterStartNteract<CR>
 " for easymotion
 map <Leader>e <Plug>(easymotion-prefix)
 
+let g:deoplete#enable_at_startup = 1
 
 " ALE
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_linters = {'python': ['flake8', 'black', 'pyls']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],

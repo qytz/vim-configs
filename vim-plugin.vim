@@ -28,10 +28,15 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'hotoo/pangu.vim'
+Plug 'roman/golden-ratio'
 
 if v:version >= 800
 Plug 'w0rp/ale'     " async syntastic
-Plug 'maralla/completor.vim'
+"Plug 'maralla/completor.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'zchee/deoplete-jedi'
 else
 Plug 'scrooloose/syntastic'
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
@@ -66,6 +71,7 @@ Plug 'szw/vim-ctrlspace'
 Plug 'godlygeek/tabular'
 
 " for python
+" Plug 'heavenshell/vim-pydocstring'
 " Plug 'klen/python-mode'
 " Plug 'davidhalter/jedi-vim', {'for': 'python'}
 " edit ipython notebook

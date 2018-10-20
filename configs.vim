@@ -202,6 +202,7 @@ nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
 nnoremap <leader>, :e#<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
+set splitright
 nmap <silent> <leader>hs :split<Bar>:wincmd j<CR>
 nmap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 " Close the current window
