@@ -16,12 +16,17 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" super simple vim plugin to show the list of buffers in the command bar
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
+" Git wrapper
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'   " show modify colum
-Plug 'kshenoy/vim-signature'   " easy mark
-Plug 'godlygeek/csapprox'  "Make gvim-only colorschemes work transparently in terminal vim
+" show modify colum
+Plug 'mhinz/vim-signify'
+" easy mark
+Plug 'kshenoy/vim-signature'
+" Make gvim-only colorschemes work transparently in terminal vim
+Plug 'godlygeek/csapprox'
 " themes
 Plug 'KabbAmine/yowish.vim'
 Plug 'whatyouhide/vim-gotham'
@@ -31,43 +36,32 @@ Plug 'hotoo/pangu.vim'
 Plug 'roman/golden-ratio'
 
 if v:version >= 800
-Plug 'w0rp/ale'     " async syntastic
-"Plug 'maralla/completor.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'zchee/deoplete-jedi'
+    Plug 'w0rp/ale'     " async syntastic
+    "Plug 'maralla/completor.vim'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'zchee/deoplete-jedi'
 else
-Plug 'scrooloose/syntastic'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+    Plug 'scrooloose/syntastic'
+    Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
+    Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 endif
+
 Plug 'Valloric/MatchTagAlways'
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
-" Plug 'EinfachToll/DidYouMean'
-" Plug 'AndrewRadev/splitjoin.vim'
-
 Plug 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
 Plug 'gorodinskiy/vim-coloresque' " css/less/sass/html color preview for vim
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
-
-" language highlight
-Plug 'othree/html5.vim', {'for': 'html'}
-Plug 'elzr/vim-json', {'for': 'json'}
-Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
-Plug 'othree/javascript-libraries-syntax.vim',   {'for': 'javascript'}
-Plug 'Rykka/riv.vim', {'for': 'rst'}
-Plug 'Rykka/InstantRst'
-Plug 'peterhoeg/vim-qml'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', {'for': 'go'}
 
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
+" tabs / buffers / files management, fast fuzzy searching powered by Go
 Plug 'szw/vim-ctrlspace'
-" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-" Plug 'Chiel92/vim-autoformat'
+" Vim script for text filtering and alignment
 Plug 'godlygeek/tabular'
 
 " for python
@@ -79,19 +73,38 @@ Plug 'godlygeek/tabular'
 " Plug 'goerz/ipynb_notedown.vim'
 " Plug 'tell-k/vim-autopep8', {'for': 'python'}
 
-if g:vim_clean_mode == 0
-    Plug 'tpope/vim-surround'
-    "Plug 'kchmck/vim-coffee-script'
-    "Plug 'vim-ruby/vim-ruby'
-    Plug 'wting/rust.vim'
-    Plug 'Shougo/vinarise.vim'
-    Plug 'terryma/vim-expand-region'
-    Plug 'vim-scripts/DrawIt'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'gregsexton/MatchTag'
-    Plug 'vim-scripts/vst_with_syn'
-    Plug 'terryma/vim-multiple-cursors'
-    Plug 'christoomey/vim-tmux-navigator'
-endif
+" An asynchronous fuzzy finder which is used to quickly locate files, buffers, mrus, tags, etc. in large project.
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
+" True Sublime Text style multiple selections for Vim
+Plug 'terryma/vim-multiple-cursors'
+" A solid language pack for Vim.
+Plug 'sheerun/vim-polyglot'
+" An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
+Plug 'dyng/ctrlsf.vim'
+"provides support for expanding abbreviations similar to emmet.
+Plug 'mattn/emmet-vim'
+" allows you to visually select increasingly larger regions of text using the same key combination.
+Plug 'terryma/vim-expand-region'
+" Ultimate hex editing system with Vim
+Plug 'Shougo/vinarise.vim'
+
+Plug 'tpope/vim-surround'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'vim-ruby/vim-ruby'
+" Plug 'wting/rust.vim'
+" -- draw stuffs
+Plug 'vim-scripts/DrawIt'
+Plug 'aklt/plantuml-syntax'
+Plug 'scrooloose/vim-slumlord'
+Plug 'wannesm/wmgraphviz.vim'
+
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'gregsexton/MatchTag'
+Plug 'vim-scripts/vst_with_syn'
+
+" input method fuzzy
+Plug 'qytz/vim-barbaric'
+" Plug 'christoomey/vim-tmux-navigator'
 " Add plugins to &runtimepath
 call plug#end()

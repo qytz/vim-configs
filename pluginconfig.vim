@@ -109,14 +109,12 @@ endif
 
 let g:instant_rst_port = 8899
 
-if g:vim_clean_mode == 0
-    " pymode
-    let g:pymode_python = 'python'
-    let g:pymode_warnings = 1
-    let g:pymode_trim_whitespaces = 1
-    let g:pymode_options = 1
-    let g:pymode_lint_on_write = 0
-endif
+" pymode
+""let g:pymode_python = 'python'
+""let g:pymode_warnings = 1
+""let g:pymode_trim_whitespaces = 1
+""let g:pymode_options = 1
+""let g:pymode_lint_on_write = 0
 
 " let g:jedi#completions_command = "<C-Space>"
 " let g:jedi#completions_enabled = 0
@@ -133,6 +131,7 @@ let g:deoplete#enable_at_startup = 1
 
 " ALE
 let g:ale_completion_enabled = 0
+let g:ale_python_black_options = "-l 100"
 let g:ale_linters = {'python': ['flake8', 'black', 'pyls']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
