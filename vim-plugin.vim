@@ -19,6 +19,8 @@ Plug 'vim-airline/vim-airline-themes'
 " super simple vim plugin to show the list of buffers in the command bar
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
+" Lightning fast left-right movement in Vim
+Plug 'unblevable/quick-scope'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 " show modify colum
@@ -34,6 +36,8 @@ Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'hotoo/pangu.vim'
 Plug 'roman/golden-ratio'
+" A Vim auto-pair plugin that supports multi-character pairs, intelligent matching, and more
+Plug 'tmsvg/pear-tree'
 
 if v:version >= 800
     Plug 'w0rp/ale'     " async syntastic
@@ -78,8 +82,8 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
-" A solid language pack for Vim.
-Plug 'sheerun/vim-polyglot'
+" A solid language pack for Vim.  -- no good, affect iskeyword
+" Plug 'sheerun/vim-polyglot'
 " An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
 Plug 'dyng/ctrlsf.vim'
 "provides support for expanding abbreviations similar to emmet.
@@ -98,6 +102,7 @@ Plug 'vim-scripts/DrawIt'
 Plug 'aklt/plantuml-syntax'
 Plug 'scrooloose/vim-slumlord'
 Plug 'wannesm/wmgraphviz.vim'
+Plug 'gyim/vim-boxdraw'
 
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'gregsexton/MatchTag'
