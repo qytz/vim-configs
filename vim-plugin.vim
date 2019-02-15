@@ -28,6 +28,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 " easy mark
 Plug 'kshenoy/vim-signature'
+" Automatic resizing of Vim windows to the golden ratio
+Plug 'roman/golden-ratio'
 " color themes
 Plug 'godlygeek/csapprox'   " Make gvim-only colorschemes work transparently in terminal vim
 Plug 'NLKNguyen/papercolor-theme'

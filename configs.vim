@@ -270,7 +270,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " ---------------
 " Color Scheme
 " ---------------
-silent! set term=screen-256color
+"silent! set term=screen-256color
 silent! set t_Co=256
 set background=dark
 " colorscheme
