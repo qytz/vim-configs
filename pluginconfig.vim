@@ -25,7 +25,10 @@ let g:startify_custom_header =
             \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
 " airline
-" let g:airline_theme = 'light'
+let g:airline_theme = 'luna'
+"let g:airline_theme = 'light'
+"let g:airline_theme = 'molokai'
+"let g:airline_theme = 'papercolor'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
@@ -64,6 +67,9 @@ nmap <leader>sd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " vim-better-whitespace
 autocmd FileType c,h,py,pyw,vim,js,cpp autocmd BufWritePre <buffer> StripWhitespace
+
+" PanGu for Chinese typesetting
+autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx,*.rst call PanGuSpacing()
 
 " vim-javascript
 let g:javascript_enable_domhtmlcss=1

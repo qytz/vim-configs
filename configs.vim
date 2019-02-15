@@ -41,28 +41,7 @@ if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ 14
     "set guifontwide=Droid\ Sans\ Mono\ 14
 endif
-if exists('$TMUX')
-    set term=screen-256color
-endif
-
-if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
-    set t_Co=256
-endif
 set hidden  "hide buffers when not displayed
-
-" colorscheme
-set background=dark
-"silent! colorscheme solarized
-try
-    let g:solarized_termcolors=256
-    "let g:solarized_termtrans=1
-    colorscheme solarized
-catch
-    colorscheme desert
-endtry
-"colorscheme yowish
-colorscheme molokai
-"colorscheme gotham
 
 " ---------------
 " Text Format
@@ -150,7 +129,7 @@ set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set history=1000 "store lots of :cmdline history
 set matchpairs+=<:> " add html matchpairs
 set tags=tags;/ " auto add tags file updirs
-set spell spelllang=en_us,cjk
+"set spell spelllang=en_us,cjk
 
 " ---------------
 " Mapping & shortkeys
@@ -287,3 +266,21 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+" ---------------
+" Color Scheme
+" ---------------
+silent! set term=screen-256color
+silent! set t_Co=256
+set background=dark
+" colorscheme
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+"set background=dark
+"colorscheme solarized
+"colorscheme primary
+"colorscheme PaperColor
+colorscheme desert256
+
+" make the colorscheme transparent for terminal
+highlight Normal ctermbg=NONE

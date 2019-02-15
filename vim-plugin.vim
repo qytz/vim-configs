@@ -16,6 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " super simple vim plugin to show the list of buffers in the command bar
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
@@ -27,24 +28,25 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 " easy mark
 Plug 'kshenoy/vim-signature'
-" Make gvim-only colorschemes work transparently in terminal vim
-Plug 'godlygeek/csapprox'
-" themes
-Plug 'KabbAmine/yowish.vim'
-Plug 'whatyouhide/vim-gotham'
-Plug 'tomasr/molokai'
+" color themes
+Plug 'godlygeek/csapprox'   " Make gvim-only colorschemes work transparently in terminal vim
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'google/vim-colorscheme-primary'
 Plug 'altercation/vim-colors-solarized'
+" 『盘古之白』中文排版自动规范化的 Vim 插件
 Plug 'hotoo/pangu.vim'
-Plug 'roman/golden-ratio'
 " A Vim auto-pair plugin that supports multi-character pairs, intelligent matching, and more
 Plug 'tmsvg/pear-tree'
 
 if v:version >= 800
     Plug 'w0rp/ale'     " async syntastic
-    "Plug 'maralla/completor.vim'
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
+    if has('python3')
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    else
+        Plug 'maralla/completor.vim'
+    endif
     Plug 'zchee/deoplete-jedi'
 else
     Plug 'scrooloose/syntastic'
@@ -109,7 +111,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'vim-scripts/vst_with_syn'
 
 " input method fuzzy
-Plug 'qytz/vim-barbaric'
+"Plug 'qytz/vim-barbaric'
 " Plug 'christoomey/vim-tmux-navigator'
 " Add plugins to &runtimepath
 call plug#end()
