@@ -280,6 +280,8 @@ set background=dark
 "colorscheme solarized
 "colorscheme primary
 "colorscheme PaperColor
+"colorscheme one
+"colorscheme moonfly
 colorscheme desert256
 
 " make the colorscheme transparent for terminal

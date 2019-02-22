@@ -35,6 +35,9 @@ Plug 'godlygeek/csapprox'   " Make gvim-only colorschemes work transparently in 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'google/vim-colorscheme-primary'
 Plug 'altercation/vim-colors-solarized'
+Plug 'rakr/vim-one'
+Plug 'bluz71/vim-moonfly-colors'
+
 " 『盘古之白』中文排版自动规范化的 Vim 插件
 Plug 'hotoo/pangu.vim'
 " A Vim auto-pair plugin that supports multi-character pairs, intelligent matching, and more
