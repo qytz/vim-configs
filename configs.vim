@@ -28,12 +28,12 @@ set number      "show line numbers
 set list
 set listchars=tab:▷\ ,trail:⋅,nbsp:⋅
 
-set colorcolumn=100
 set cursorline
 set laststatus=2 "always show statusline
 set wrap        "wrap lines
 set linebreak   "wrap lines at convenient points
-set textwidth=100   "auto newline when >100
+set textwidth=120   "auto newline when >120
+set colorcolumn=120
 "set wrapmargin=2   "count columns from right
 set showmatch   "highlight marched brackets
 " set guifont
@@ -76,7 +76,7 @@ set foldlevel=10
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:longest,full
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set completeopt+=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt+=longest,menu    "让 Vim 的补全菜单行为与一般 IDE 一致（参考 VimTip1228)
 set completeopt-=preview
 
 " ------------------------
@@ -95,8 +95,8 @@ set fileencoding=utf8
 " gb18030 should be before UTF-8
 set fileencodings=utf-8,gb18030,default
 set formatoptions-=o "dont continue comments when pushing o/O
-" Vim支持在编辑文本时自动折行，但默认对中文折行的支持并不理想，建议添加如下两个设置：
-" 如遇Unicode值大于255的文本，不必等到空格再折行。
+" Vim 支持在编辑文本时自动折行，但默认对中文折行的支持并不理想，建议添加如下两个设置：
+" 如遇 Unicode 值大于 255 的文本，不必等到空格再折行。
 set formatoptions+=m
 " 合并两行中文时，不在中间加空格：
 set formatoptions+=B
