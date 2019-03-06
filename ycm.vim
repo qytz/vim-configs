@@ -11,7 +11,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>    "force recomile with syntastic
 " nnoremap <leader>lo :lopen<CR>    "open locationlist
 " nnoremap <leader>lc :lclose<CR>   "close locationlist
-inoremap <leader><leader> <C-x><C-o>
+" inoremap <leader><leader> <C-x><C-o>
 
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
