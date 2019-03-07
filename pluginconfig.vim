@@ -139,7 +139,7 @@ let g:deoplete#enable_at_startup = 1
 
 " ALE
 let g:ale_completion_enabled = 0
-let g:ale_python_black_options = "-l 160"
+let g:ale_python_black_options = "-l 120"
 let g:ale_python_flake8_options= "--max-line-length 160"
 let g:ale_python_mypy_options= "--ignore-missing-imports --incremental"
 let g:ale_linters = {'python': ['flake8', 'black', 'mypy', 'pyls']}
