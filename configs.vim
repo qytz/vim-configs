@@ -282,7 +282,22 @@ set background=dark
 "colorscheme PaperColor
 "colorscheme one
 "colorscheme moonfly
+"colorscheme darkspectrum
 colorscheme desert256
 
 " make the colorscheme transparent for terminal
 highlight Normal ctermbg=NONE
+
+if v:version > 703
+    " This makes copy and paste also work better.
+    set clipboard=unnamedplus
+endif
+" Automatically re-open files after they have changed without prompting.
+" This can be a little more destructive, but a lot less annoying.
+set autoread
+
+" Automatically reload vimrc on save
+augroup ReloadVimrcGroup
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
