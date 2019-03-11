@@ -9,3 +9,12 @@ flake8
 python-language-server[all]
 pyls-black
 pyls-isort
+
+# coc completeor
+:CocInstall coc-json coc-html coc-css coc-yaml coc-pyls coc-snippets coc-tsserver coc-vetur
+
+# 前端
+yarn global add vim-node-rpc
+yarn global add prettier
+yarn global add eslint eslint-plugin-vue
+yarn global add vue-language-server

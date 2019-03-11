@@ -73,6 +73,7 @@ Plug 'google/vim-searchindex'
 Plug 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
 Plug 'gorodinskiy/vim-coloresque' " css/less/sass/html color preview for vim
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'posva/vim-vue'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', {'for': 'go'}
 
