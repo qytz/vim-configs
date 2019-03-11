@@ -46,13 +46,21 @@ Plug 'tmsvg/pear-tree'
 if v:version >= 800
     Plug 'w0rp/ale'     " async syntastic
     if has('python3')
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
+        if has('nvim')
+            "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+            "Plug 'zchee/deoplete-jedi'
+            Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+        else
+            " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
+            "Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+            Plug 'Shougo/deoplete.nvim'
+            Plug 'zchee/deoplete-jedi'
+            Plug 'roxma/nvim-yarp'
+            Plug 'roxma/vim-hug-neovim-rpc'
+        endif
     else
         Plug 'maralla/completor.vim'
     endif
-    Plug 'zchee/deoplete-jedi'
 else
     Plug 'scrooloose/syntastic'
     Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
