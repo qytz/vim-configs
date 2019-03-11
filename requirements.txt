@@ -15,6 +15,6 @@ pyls-isort
 
 # 前端
 yarn global add vim-node-rpc
-yarn global add prettier
-yarn global add eslint eslint-plugin-vue
+yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
+yarn global add prettier eslint-config-prettier eslint-plugin-prettier
 yarn global add vue-language-server
