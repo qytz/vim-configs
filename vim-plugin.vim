@@ -65,6 +65,12 @@ else
     Plug 'scrooloose/syntastic'
     Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
     Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+    " for python
+    Plug 'heavenshell/vim-pydocstring'
+    " Plug 'klen/python-mode'
+    Plug 'davidhalter/jedi-vim', {'for': 'python'}
+    Plug 'tell-k/vim-autopep8', {'for': 'python'}
 endif
 
 Plug 'Valloric/MatchTagAlways'
@@ -88,17 +94,12 @@ Plug 'szw/vim-ctrlspace'
 " Vim script for text filtering and alignment
 Plug 'godlygeek/tabular'
 
-" for python
-" Plug 'heavenshell/vim-pydocstring'
-" Plug 'klen/python-mode'
-" Plug 'davidhalter/jedi-vim', {'for': 'python'}
-" edit ipython notebook
-" Plug 'vyzyv/vimpyter'
-" Plug 'goerz/ipynb_notedown.vim'
-" Plug 'tell-k/vim-autopep8', {'for': 'python'}
-
 " An asynchronous fuzzy finder which is used to quickly locate files, buffers, mrus, tags, etc. in large project.
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
+" edit ipython notebook
+Plug 'vyzyv/vimpyter'
+Plug 'goerz/ipynb_notedown.vim'
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
