@@ -138,7 +138,6 @@ map <Leader>e <Plug>(easymotion-prefix)
 let g:deoplete#enable_at_startup = 1
 
 " ALE
-let g:ale_completion_enabled = 0
 let g:ale_python_black_options = "-l 120"
 let g:ale_python_flake8_options= "--max-line-length 160"
 let g:ale_python_mypy_options= "--ignore-missing-imports --incremental"
@@ -166,7 +165,7 @@ highlight ALEErrorSign ctermfg=9 ctermbg=15 guifg=#C30500 guibg=#F5F5F5
 highlight ALEWarningSign ctermfg=11 ctermbg=15 guifg=#ED6237 guibg=#F5F5F5
 let g:ale_warn_about_trailing_whitespace = 0
 let g:ale_maximum_file_size = 1024 * 1024
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_set_balloons_legacy_echo = 1
 let g:ale_c_parse_compile_commands = 1
 
