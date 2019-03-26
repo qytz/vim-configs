@@ -9,6 +9,7 @@ flake8
 python-language-server[all]
 pyls-black
 pyls-isort
+notedown
 
 # coc completeor
 :CocInstall coc-json coc-html coc-css coc-yaml coc-pyls coc-snippets coc-tsserver coc-vetur

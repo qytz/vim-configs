@@ -100,8 +100,8 @@ Plug 'godlygeek/tabular'
 " Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " edit ipython notebook
-Plug 'vyzyv/vimpyter'
-Plug 'goerz/ipynb_notedown.vim'
+Plug 'szymonmaszke/vimpyter'
+Plug 'goerz/jupytext.vim'
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
