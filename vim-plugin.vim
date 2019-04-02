@@ -63,7 +63,7 @@ if v:version >= 800
     endif
 else
     Plug 'scrooloose/syntastic'
-    if v:version: >= 7.4.1578
+    if v:version >= 7.4.1578
         Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
         Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
     endif
