@@ -37,6 +37,8 @@ Plug 'google/vim-colorscheme-primary'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rakr/vim-one'
 Plug 'bluz71/vim-moonfly-colors'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'joshdick/onedark.vim'
 
 " 『盘古之白』中文排版自动规范化的 Vim 插件
 Plug 'hotoo/pangu.vim'
