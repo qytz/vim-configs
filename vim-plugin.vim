@@ -51,7 +51,8 @@ if v:version >= 800
         if has('nvim')
             "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
             "Plug 'zchee/deoplete-jedi'
-            Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+            "install from source Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+            Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
         else
             " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
             "Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
@@ -124,9 +125,6 @@ Plug 'tpope/vim-surround'
 " Plug 'wting/rust.vim'
 " -- draw stuffs
 Plug 'vim-scripts/DrawIt'
-Plug 'aklt/plantuml-syntax'
-Plug 'scrooloose/vim-slumlord'
-Plug 'wannesm/wmgraphviz.vim'
 Plug 'gyim/vim-boxdraw'
 
 Plug 'jistr/vim-nerdtree-tabs'
