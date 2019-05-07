@@ -41,6 +41,10 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
 " translate plugin
 Plug 'voldikss/vim-translate-me'
+" keep and restore fcitx state when leaving/re-entering insert mode
+Plug 'lilydjwg/fcitx.vim'
+" Gundo.vim is Vim plugin to visualize your Vim undo tree.
+Plug 'sjl/gundo.vim'
 
 " 『盘古之白』中文排版自动规范化的 Vim 插件
 Plug 'hotoo/pangu.vim'

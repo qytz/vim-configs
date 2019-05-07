@@ -13,6 +13,9 @@ noremap <F8> :ALEFix<CR>
 nnoremap <F10> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
 nnoremap <F9> :call call(function('ConnectCscopeDatabase'), [])<CR>
 
+" Gundo
+nnoremap <leader>ud :GundoToggle<CR>
+
 let g:tagbar_sort = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_singleclick = 1
