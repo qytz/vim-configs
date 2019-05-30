@@ -21,7 +21,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
 " Lightning fast left-right movement in Vim
-Plug 'unblevable/quick-scope'
+" Plug 'unblevable/quick-scope'     " may make vim move very very slowly for rst file
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 " show modify colum
@@ -109,8 +109,11 @@ Plug 'godlygeek/tabular'
 " Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " edit ipython notebook
-Plug 'szymonmaszke/vimpyter'
+"Plug 'szymonmaszke/vimpyter'
 Plug 'goerz/jupytext.vim'
+
+" The interactive scratchpad for hackers.
+Plug 'metakirby5/codi.vim'
 
 " True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'

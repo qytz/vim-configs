@@ -13,6 +13,8 @@ noremap <F8> :ALEFix<CR>
 nnoremap <F10> :call call(function('BuildCscopeDatabase'), [1, 1, 0])<CR>
 nnoremap <F9> :call call(function('ConnectCscopeDatabase'), [])<CR>
 
+" Toggle Codi
+nnoremap <leader>ru :Codi!!<CR>
 " Gundo
 nnoremap <leader>ud :GundoToggle<CR>
 
