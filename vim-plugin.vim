@@ -39,6 +39,7 @@ Plug 'rakr/vim-one'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 " translate plugin
 Plug 'voldikss/vim-translate-me'
 " keep and restore fcitx state when leaving/re-entering insert mode
