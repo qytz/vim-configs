@@ -99,15 +99,15 @@ Plug 'posva/vim-vue'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', {'for': 'go'}
 
+" fuzzy file&buffer&str searching tools
 Plug 'rking/ag.vim'
-Plug 'kien/ctrlp.vim'
-" tabs / buffers / files management, fast fuzzy searching powered by Go
-Plug 'szw/vim-ctrlspace'
+"Plug 'kien/ctrlp.vim'
+"Plug 'szw/vim-ctrlspace'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
 " Vim script for text filtering and alignment
 Plug 'godlygeek/tabular'
-
-" An asynchronous fuzzy finder which is used to quickly locate files, buffers, mrus, tags, etc. in large project.
-" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " edit ipython notebook
 "Plug 'szymonmaszke/vimpyter'
