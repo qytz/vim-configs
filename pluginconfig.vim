@@ -83,7 +83,7 @@ noremap <C-P> :Leaderf file<CR>
 " append the result to previous search results.
 noremap <leader>r :Leaderf rg<CR>
 " search word under cursor literally only in current buffer
-noremap <leader>b :Leaderf buffer<CR>
+noremap <leader><leader> :Leaderf buffer<CR>
 " search visually selected text literally, don't quit LeaderF after accepting an entry
 " xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR>
 " recall last search. If the result window is closed, reopen it.
