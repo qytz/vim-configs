@@ -3,8 +3,10 @@ let mapleader=" "
 "nnoremap s <Nop>
 "let mapleader = "s"
 
-set backup
-set backupdir=~/.vim/.backup
+"set backup
+"set backupdir=~/.vim/.backup
+set nobackup
+set nowritebackup
 set directory=~/.vim/.swap
 
 if v:version >= 703
@@ -300,7 +302,17 @@ set background=dark
 "colorscheme moonfly
 "colorscheme darkspectrum
 colorscheme desert256
+"colorscheme nord
 
 " make the colorscheme transparent for terminal
 highlight Normal ctermbg=NONE
 
+" --- from coc ---
+" Better display for messages
+set cmdheight=2
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes

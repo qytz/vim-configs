@@ -12,7 +12,7 @@ pyls-isort
 notedown
 
 # coc completeor
-:CocInstall coc-json coc-html coc-css coc-yaml coc-pyls coc-snippets coc-tsserver coc-vetur
+:CocInstall coc-python coc-json coc-html coc-css coc-tsserver coc-hightlight coc-yaml coc-xml coc-vimlsp coc-marketplace coc-snippets coc-vetur
 
 # 前端
 yarn global add vim-node-rpc

@@ -24,7 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'unblevable/quick-scope'     " may make vim move very very slowly for rst file
 " Git wrapper
 Plug 'tpope/vim-fugitive'
-" show modify colum
+" show modify colum, Supports git, mercurial, darcs, bazaar, subversion, cvs, rcs, fossil, accurev, perforce, tfs, yadm.
 Plug 'mhinz/vim-signify'
 " easy mark
 Plug 'kshenoy/vim-signature'
@@ -40,10 +40,11 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 " translate plugin
 Plug 'voldikss/vim-translate-me'
 " keep and restore fcitx state when leaving/re-entering insert mode
-Plug 'lilydjwg/fcitx.vim'
+" Plug 'lilydjwg/fcitx.vim'
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
 Plug 'sjl/gundo.vim'
 
@@ -51,6 +52,8 @@ Plug 'sjl/gundo.vim'
 Plug 'hotoo/pangu.vim'
 " A Vim auto-pair plugin that supports multi-character pairs, intelligent matching, and more
 Plug 'tmsvg/pear-tree'
+" EditorConfig support
+Plug 'editorconfig/editorconfig-vim'
 
 if v:version >= 800
     Plug 'w0rp/ale'     " async syntastic
@@ -62,9 +65,9 @@ if v:version >= 800
             Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
         else
             " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-            "Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-            Plug 'Shougo/deoplete.nvim'
-            Plug 'zchee/deoplete-jedi'
+            Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+            "Plug 'Shougo/deoplete.nvim'
+            "Plug 'zchee/deoplete-jedi'
             Plug 'roxma/nvim-yarp'
             Plug 'roxma/vim-hug-neovim-rpc'
         endif
@@ -145,4 +148,5 @@ Plug 'vim-scripts/vst_with_syn'
 "Plug 'qytz/vim-barbaric'
 " Plug 'christoomey/vim-tmux-navigator'
 " Add plugins to &runtimepath
+Plug 'brglng/vim-im-select'
 call plug#end()
