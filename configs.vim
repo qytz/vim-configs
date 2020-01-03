@@ -197,7 +197,7 @@ nmap <silent> <leader>sc :close<CR>
 nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
 
 " Format the entire file
-nmap <leader>ff ggVG=
+" nmap <leader>ff ggVG=
 
 "map Q to something useful
 noremap Q gq

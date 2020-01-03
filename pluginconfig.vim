@@ -76,19 +76,66 @@ nmap <leader>si :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
 " Find functions called by this function
 nmap <leader>sd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-let g:Lf_RootMarkers = ['.git', '.hg', '.svn']
+noremap <Leader><Leader> :Leaderf self<CR>
+" let g:Lf_RootMarkers = ['.git', '.hg', '.svn']
 let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_ShortcutF = "<C-P>"
+" don't show the help in normal mode
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 1
+let g:Lf_IgnoreCurrentBufferName = 1
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
+noremap <F6> :Leaderf bufTag<CR>
+
+let g:Lf_RgConfig = [
+        \ "--max-columns=150",
+        \ "--type-add web:*.{html,css,js}*",
+        \ "--glob=!git/*",
+        \ "--hidden"
+    \ ]
+
 " search word under cursor, the pattern is treated as regex, and enter normal mode directly
-noremap <C-P> :Leaderf file<CR>
+noremap <Leader>lf :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR><CR>
 " search word under cursor, the pattern is treated as regex,
 " append the result to previous search results.
-noremap <leader>r :Leaderf rg<CR>
+" noremap <C-G> :<C-U><C-R>=printf("Leaderf! rg --append -e %s ", expand("<cword>"))<CR>
 " search word under cursor literally only in current buffer
-noremap <leader><leader> :Leaderf buffer<CR>
+" noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg -F --current-buffer -e %s ", expand("<cword>"))<CR>
+" search word under cursor literally in all listed buffers
+" noremap <C-D> :<C-U><C-R>=printf("Leaderf! rg -F --all-buffers -e %s ", expand("<cword>"))<CR>
 " search visually selected text literally, don't quit LeaderF after accepting an entry
-" xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR>
+xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR><CR>
 " recall last search. If the result window is closed, reopen it.
-" noremap go :<C-U>Leaderf! rg --stayOpen --recall<CR>
+noremap <Leader>ll :<C-U>Leaderf! rg --recall<CR><CR>
+" search word under cursor in *.h and *.cpp files.
+" noremap <Leader>a :<C-U><C-R>=printf("Leaderf! rg -e %s -g *.h -g *.cpp", expand("<cword>"))<CR>
+" the same as above
+" noremap <Leader>a :<C-U><C-R>=printf("Leaderf! rg -e %s -g *.{h,cpp}", expand("<cword>"))<CR>
+" search word under cursor in cpp and java files.
+" noremap <Leader>b :<C-U><C-R>=printf("Leaderf! rg -e %s -t cpp -t java", expand("<cword>"))<CR>
+" search word under cursor in cpp files, exclude the *.hpp files
+" noremap <Leader>c :<C-U><C-R>=printf("Leaderf! rg -e %s -t cpp -g !*.hpp", expand("<cword>"))<CR>
+" search word under cursor in py files
+noremap <Leader>lp :<C-U><C-R>=printf("Leaderf! rg -e %s -t py", expand("<cword>"))<CR><CR>
+
+" let g:Lf_GtagsAutoGenerate = 1
+" let g:Lf_Gtagslabel = 'native-pygments'
+" noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+" noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+" noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+" noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+" noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 
 " vim-expand-region
 "map J <Plug>(expand_region_expand)

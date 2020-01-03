@@ -1,5 +1,5 @@
 # requiremets:
-git zsh cscope ctags clang cmake python-dev tmux silversearcher-ag curl jq
+git zsh cscope ctags clang cmake python-dev tmux silversearcher-ag curl jq ripgrep
 build-essential libclang-dev libncurses-dev libboost-dev libz-dev cmake xz-utils
 
 # pip requiremets
