@@ -118,7 +118,7 @@ noremap <Leader>lf :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<C
 " search visually selected text literally, don't quit LeaderF after accepting an entry
 xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR><CR>
 " recall last search. If the result window is closed, reopen it.
-noremap <Leader>ll :<C-U>Leaderf! rg --recall<CR><CR>
+noremap <Leader>ll :<C-U>Leaderf! rg --recall<CR>
 " search word under cursor in *.h and *.cpp files.
 " noremap <Leader>a :<C-U><C-R>=printf("Leaderf! rg -e %s -g *.h -g *.cpp", expand("<cword>"))<CR>
 " the same as above

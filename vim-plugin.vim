@@ -62,10 +62,10 @@ if v:version >= 800
             "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
             "Plug 'zchee/deoplete-jedi'
             "install from source Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-            Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+            Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
         else
             " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-            Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+            Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
             "Plug 'Shougo/deoplete.nvim'
             "Plug 'zchee/deoplete-jedi'
             Plug 'roxma/nvim-yarp'
