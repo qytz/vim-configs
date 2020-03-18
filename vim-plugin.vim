@@ -120,7 +120,8 @@ Plug 'goerz/jupytext.vim'
 Plug 'metakirby5/codi.vim'
 
 " True Sublime Text style multiple selections for Vim
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 " A solid language pack for Vim.  -- no good, affect iskeyword
 " Plug 'sheerun/vim-polyglot'
 " An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
