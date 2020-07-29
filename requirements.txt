@@ -12,10 +12,36 @@ pyls-isort
 notedown
 
 # coc completeor
-:CocInstall coc-python coc-json coc-html coc-css coc-tsserver coc-hightlight coc-yaml coc-xml coc-vimlsp coc-marketplace coc-snippets coc-vetur
+## python
+:CocInstall coc-python
+## rust
+:CocInstall coc-rls coc-rust-analyzer
+## go
+:CocInstall coc-go
+## java
+:CocInstall coc-java
+## json
+:CocInstall coc-json
+## yaml
+:CocInstall coc-yaml
+## viml
+:CocInstall coc-vimlsp
+## html/xml/css & frontend
+:CocInstall coc-html coc-css coc-xml
+:CocInstall coc-eslint coc-tsserver coc-vetur
+# other
+:CocInstall coc-cmake
+:CocInstall coc-yank coc-lists coc-snippets
+:CocInstall coc-marketplace
+# may have performace problem
+:CocInstall coc-hightlight
 
 # 前端
 yarn global add vim-node-rpc
 yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
 yarn global add prettier eslint-config-prettier eslint-plugin-prettier
 yarn global add vue-language-server
+
+# rust
+rustup update
+rustup component add rls rust-analysis rust-src

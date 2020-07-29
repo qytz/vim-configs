@@ -21,7 +21,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'bling/vim-bufferline'
 " Plug 'mhinz/vim-startify'
 " Lightning fast left-right movement in Vim
-" Plug 'unblevable/quick-scope'     " may make vim move very very slowly for rst file
+" may make vim move very very slowly for rst file
+" Plug 'unblevable/quick-scope'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 " show modify colum, Supports git, mercurial, darcs, bazaar, subversion, cvs, rcs, fossil, accurev, perforce, tfs, yadm.
@@ -31,7 +32,8 @@ Plug 'kshenoy/vim-signature'
 " Automatic resizing of Vim windows to the golden ratio
 Plug 'roman/golden-ratio'
 " color themes
-Plug 'godlygeek/csapprox'   " Make gvim-only colorschemes work transparently in terminal vim
+" Make gvim-only colorschemes work transparently in terminal vim
+Plug 'godlygeek/csapprox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'google/vim-colorscheme-primary'
 Plug 'altercation/vim-colors-solarized'
@@ -56,7 +58,8 @@ Plug 'tmsvg/pear-tree'
 Plug 'editorconfig/editorconfig-vim'
 
 if v:version >= 800
-    Plug 'w0rp/ale'     " async syntastic
+    " async syntastic
+    Plug 'w0rp/ale'
     if has('python3')
         if has('nvim')
             "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -91,9 +94,16 @@ endif
 Plug 'Valloric/MatchTagAlways'
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
-Plug 'chrisbra/Colorizer' " colorize all text in the form #rrggbb or #rgb
-Plug 'gorodinskiy/vim-coloresque' " css/less/sass/html color preview for vim
-Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
+" colorize all text in the form #rrggbb or #rgb
+Plug 'chrisbra/Colorizer'
+" css/less/sass/html color preview for vim
+Plug 'gorodinskiy/vim-coloresque'
+" helps to end certain structures automatically
+Plug 'tpope/vim-endwise'
+" Insert or delete brackets, parens, quotes in pair.
+Plug 'jiangmiao/auto-pairs'
+" automatic closing of quotes, parenthesis, brackets, etc.
+" Plug 'Raimondi/delimitMate'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
