@@ -101,7 +101,7 @@ Plug 'gorodinskiy/vim-coloresque'
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
 " Insert or delete brackets, parens, quotes in pair.
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'Raimondi/delimitMate'
 Plug 'pangloss/vim-javascript'
