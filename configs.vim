@@ -305,7 +305,7 @@ colorscheme desert256
 "colorscheme nord
 
 " make the colorscheme transparent for terminal
-highlight Normal ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 " --- from coc ---
 " Better display for messages
