@@ -1,5 +1,5 @@
 # requiremets:
-git zsh cscope ctags clang cmake python-dev tmux silversearcher-ag curl jq ripgrep
+git zsh cscope exuberant-ctags clang cmake python3-dev tmux silversearcher-ag curl jq ripgrep
 build-essential libclang-dev libncurses-dev libboost-dev libz-dev cmake xz-utils
 
 # pip requiremets
@@ -13,11 +13,16 @@ notedown
 
 # coc completeor
 ## python
+:CocInstall coc-pyright
 :CocInstall coc-python
+:CocInstall coc-jedi
 ## rust
-:CocInstall coc-rls coc-rust-analyzer
+:CocInstall coc-rls
+:CocInstall coc-rust-analyzer
 ## go
 :CocInstall coc-go
+## c++
+:CocInstall coc-clangd
 ## java
 :CocInstall coc-java
 ## json

@@ -1,5 +1,14 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
+" vim-plug configs
+let g:plug_threads=20
+let g:plug_timeout=10
+let g:plug_retries=3
+"let g:plug_shallow=1
+"let g:plug_url_format="https://git::@github.com/%s.git"
+"let g:plug_url_format="https://git::@hub.fastgit.org/%s.git"
+let g:plug_url_format="git@github.com:%s.git"
+
 call plug#begin('~/.vim/plugs')
 
 Plug 'tpope/vim-sensible'
