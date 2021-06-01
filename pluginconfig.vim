@@ -171,7 +171,6 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 " vim-ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<Leader><Space>"
 
-"source ~/.vim/neocomplete.vim
 if v:version < 800
     source ~/.vim/ycm.vim
     " for syntastic

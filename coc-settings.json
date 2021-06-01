@@ -1,4 +1,5 @@
 {
     "python.jediEnabled": false,
-    "coc.preferences.colorSupport": false
+    "coc.preferences.colorSupport": false,
+    "diagnostic.displayByAle": true
 }

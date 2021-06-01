@@ -8,12 +8,14 @@ let g:plug_retries=3
 "let g:plug_url_format="https://git::@github.com/%s.git"
 "let g:plug_url_format="https://git::@hub.fastgit.org/%s.git"
 let g:plug_url_format="git@github.com:%s.git"
+let g:ale_disable_lsp = 1
 
 call plug#begin('~/.vim/plugs')
 
 Plug 'tpope/vim-sensible'
 " Plug 'JCLiang/vim-cscope-utils'
-Plug 'qytz/vim-cscope-utils'
+" Plug 'qytz/vim-cscope-utils'
+Plug 'jsfaint/gen_tags.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 " like tagbar, but for markdown and rest etc.
