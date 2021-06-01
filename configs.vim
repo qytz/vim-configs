@@ -274,6 +274,9 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 if v:version > 703
     " This makes copy and paste also work better.
     set clipboard=unnamedplus
+    if has('macunix')
+        set clipboard=unnamed
+    endif
 endif
 " Automatically re-open files after they have changed without prompting.
 " This can be a little more destructive, but a lot less annoying.

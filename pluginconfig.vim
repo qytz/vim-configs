@@ -147,7 +147,7 @@ autocmd FileType c,h,py,pyw,vim,js,cpp autocmd BufWritePre <buffer> StripWhitesp
 
 " PanGu for Chinese typesetting
 " autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx,*.rst,*.py call PanGuSpacing()
-autocmd BufWritePre * call PanGuSpacing()
+" autocmd BufWritePre * call PanGuSpacing()
 
 " vim-javascript
 let g:javascript_enable_domhtmlcss=1

@@ -30,7 +30,7 @@ Plug 'mhinz/vim-signify'
 " easy mark
 Plug 'kshenoy/vim-signature'
 " Automatic resizing of Vim windows to the golden ratio
-Plug 'roman/golden-ratio'
+" Plug 'roman/golden-ratio'
 " color themes
 " Make gvim-only colorschemes work transparently in terminal vim
 Plug 'godlygeek/csapprox'
@@ -110,8 +110,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'posva/vim-vue'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go', {'for': 'go'}
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
+Plug 'dgryski/vim-godef'
+Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
 Plug 'rking/ag.vim'
 "Plug 'kien/ctrlp.vim'
@@ -156,8 +157,8 @@ Plug 'gregsexton/MatchTag'
 Plug 'vim-scripts/vst_with_syn'
 
 " input method fuzzy
-"Plug 'qytz/vim-barbaric'
+" Plug 'qytz/vim-barbaric'
 " Plug 'christoomey/vim-tmux-navigator'
 " Add plugins to &runtimepath
-Plug 'brglng/vim-im-select'
+" Plug 'brglng/vim-im-select'
 call plug#end()
