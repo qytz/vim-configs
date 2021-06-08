@@ -3,10 +3,10 @@ let mapleader=" "
 "nnoremap s <Nop>
 "let mapleader = "s"
 
-"set backup
-"set backupdir=~/.vim/.backup
-set nobackup
-set nowritebackup
+set backup
+set backupdir=~/.vim/.backup
+" set nobackup
+" set nowritebackup
 set directory=~/.vim/.swap
 
 if v:version >= 703
@@ -115,7 +115,7 @@ set autowriteall
 " close popup menu window when leave insert mode
 autocmd InsertLeave * if pumvisible()==0|pclose|endif
 " select current item when press <CR>
-inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
+" inoremap <expr> <CR>  pumvisible()?"\<C-y>":"\<CR>"
 " auto-save configs
 set autoread " auto-reload when the editing file updated by other program
 au FocusLost * silent! up " auto-save when lost focus
@@ -264,7 +264,7 @@ inoremap <C-L> <C-O>:nohls<CR>
 
 " open omni completion menu closing previous if open and opening new menu without changing the text
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "上下左右键的行为 会显示其他信息
 inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
