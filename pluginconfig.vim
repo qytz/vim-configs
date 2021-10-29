@@ -5,7 +5,9 @@ set pastetoggle=<F2>
 nnoremap <F3> :set number!<cr>
 nnoremap <F4> :set relativenumber!<cr>
 nnoremap <F5> :NERDTreeToggle<cr>
-nnoremap <F6> :TagbarToggle<cr>
+" nnoremap <F6> :TagbarToggle<cr>
+" noremap <F6> :Leaderf bufTag<CR>
+nnoremap <F6> :Vista!!<cr>
 nnoremap <F7> :PanguDisable<cr>
 " Autoformat
 noremap <F8> :ALEFix<CR>
@@ -96,8 +98,6 @@ noremap <leader>lm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>la :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 noremap <Leader>ls :Leaderf self<CR>
 " noremap <leader>ll :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-
-noremap <F6> :Leaderf bufTag<CR>
 
 let g:Lf_RgConfig = [
         \ "--max-columns=150",
@@ -345,6 +345,9 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" to support <C-]> and <C-T>
+set tagfunc=CocTagFunc
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

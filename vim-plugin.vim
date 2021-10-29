@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugs')
 Plug 'tpope/vim-sensible'
 " Plug 'JCLiang/vim-cscope-utils'
 " Plug 'qytz/vim-cscope-utils'
-Plug 'jsfaint/gen_tags.vim'
+" Plug 'jsfaint/gen_tags.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 " like tagbar, but for markdown and rest etc.
@@ -77,9 +77,11 @@ if v:version >= 800
             "Plug 'zchee/deoplete-jedi'
             "install from source Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
             Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+            Plug 'liuchengxu/vista.vim'
         else
             " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
             Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
+            Plug 'liuchengxu/vista.vim'
             "Plug 'Shougo/deoplete.nvim'
             "Plug 'zchee/deoplete-jedi'
             Plug 'roxma/nvim-yarp'
@@ -121,8 +123,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'posva/vim-vue'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
-Plug 'dgryski/vim-godef'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
 Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
 Plug 'rking/ag.vim'
