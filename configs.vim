@@ -232,6 +232,7 @@ nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 " buffers nav
+nnoremap <Leader>b :ls<CR>:b<Space>
 " nnoremap <C-]> :bnext<CR>
 " nnoremap <C-\> :bprevious<CR>
 " Window Movement

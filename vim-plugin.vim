@@ -127,8 +127,10 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
 Plug 'rking/ag.vim'
-"Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'szw/vim-ctrlspace'
+" An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
+Plug 'dyng/ctrlsf.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
@@ -147,8 +149,6 @@ Plug 'metakirby5/codi.vim'
 Plug 'mg979/vim-visual-multi'
 " A solid language pack for Vim.  -- no good, affect iskeyword
 " Plug 'sheerun/vim-polyglot'
-" An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
-Plug 'dyng/ctrlsf.vim'
 "provides support for expanding abbreviations similar to emmet.
 Plug 'mattn/emmet-vim'
 " allows you to visually select increasingly larger regions of text using the same key combination.
