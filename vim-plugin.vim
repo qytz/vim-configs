@@ -18,9 +18,11 @@ Plug 'tpope/vim-sensible'
 " Plug 'jsfaint/gen_tags.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+" Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
+" View and search LSP symbols, tags in Vim/NeoVim.
+Plug 'liuchengxu/vista.vim'
 " like tagbar, but for markdown and rest etc.
 Plug 'vim-voom/VOoM'
-Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
 " nerdcommenter should be after vim-cscope-utils, the have key map conficts
 Plug 'scrooloose/nerdcommenter'
@@ -68,40 +70,19 @@ Plug 'tmsvg/pear-tree'
 " EditorConfig support
 Plug 'editorconfig/editorconfig-vim'
 
-if v:version >= 800
-    " async syntastic
-    Plug 'w0rp/ale'
-    if has('python3')
-        if has('nvim')
-            "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-            "Plug 'zchee/deoplete-jedi'
-            "install from source Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-            Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
-            Plug 'liuchengxu/vista.vim'
-        else
-            " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-            Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
-            Plug 'liuchengxu/vista.vim'
-            "Plug 'Shougo/deoplete.nvim'
-            "Plug 'zchee/deoplete-jedi'
-            Plug 'roxma/nvim-yarp'
-            Plug 'roxma/vim-hug-neovim-rpc'
-        endif
+" async syntastic
+Plug 'w0rp/ale'
+if has('python3')
+    if has('nvim')
+        Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
     else
-        Plug 'maralla/completor.vim'
+        " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
+        Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
     endif
 else
-    Plug 'scrooloose/syntastic'
-    if v:version >= 7.4.1578
-        Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer'}
-        Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-    endif
-
-    " for python
-    Plug 'heavenshell/vim-pydocstring'
-    " Plug 'klen/python-mode'
-    Plug 'davidhalter/jedi-vim', {'for': 'python'}
-    Plug 'tell-k/vim-autopep8', {'for': 'python'}
+    Plug 'maralla/completor.vim'
 endif
 
 Plug 'Valloric/MatchTagAlways'
@@ -127,18 +108,17 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
 Plug 'rking/ag.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'szw/vim-ctrlspace'
-" An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'dyng/ctrlsf.vim'
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 " Vim script for text filtering and alignment
 Plug 'godlygeek/tabular'
 
 " edit ipython notebook
-"Plug 'szymonmaszke/vimpyter'
 Plug 'goerz/jupytext.vim'
 
 " The interactive scratchpad for hackers.

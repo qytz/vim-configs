@@ -2,6 +2,7 @@
 source ~/.vim/vim-plugin.vim
 "source ~/.vim/neobundle.vim
 filetype plugin indent on
-source ~/.vim/configs.vim
-source ~/.vim/pluginconfig.vim
-
+for fname in split(glob('~/.vim/configs/*.vim'), '\n')
+    exe 'source' fname
+endfor
+source ~/.vim/configs/base.vim
