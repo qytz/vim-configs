@@ -57,7 +57,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 " translate plugin
-Plug 'voldikss/vim-translate-me'
+Plug 'voldikss/vim-translator'
 " keep and restore fcitx state when leaving/re-entering insert mode
 " Plug 'lilydjwg/fcitx.vim'
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.

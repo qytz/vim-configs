@@ -320,3 +320,10 @@ set updatetime=300
 set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
+
+" If your '{' or '}' are not in the first column, and you would like to use "[["
+" and "]]" anyway, try these mappings: >
+" :map [[ ?{<CR>w99[{
+" :map ][ /}<CR>b99]}
+" :map ]] j0[[%/{<CR>
+" :map [] k$][%?}<CR>
