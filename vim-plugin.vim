@@ -74,10 +74,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'w0rp/ale'
 if has('python3')
     if has('nvim')
-        Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
     else
         " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-        Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
+        " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
         Plug 'roxma/nvim-yarp'
         Plug 'roxma/vim-hug-neovim-rpc'
     endif
