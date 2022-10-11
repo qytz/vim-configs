@@ -40,6 +40,10 @@ notedown
 :CocInstall coc-marketplace
 # may have performace problem
 :CocInstall coc-hightlight
+# for flutter
+:CocInstall coc-flutter-tools
+or
+:CocInstall coc-flutter
 
 # 前端
 yarn global add vim-node-rpc

@@ -80,6 +80,9 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" filetype detection, syntax highlighting, and indentation for Dart code in Vim
+Plug 'dart-lang/dart-vim-plugin'
+
 Plug 'Valloric/MatchTagAlways'
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'google/vim-searchindex'
