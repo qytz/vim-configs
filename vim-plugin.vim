@@ -69,7 +69,7 @@ Plug 'tmsvg/pear-tree'
 Plug 'editorconfig/editorconfig-vim'
 
 " async syntastic
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 else

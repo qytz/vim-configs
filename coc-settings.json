@@ -1,5 +1,7 @@
 {
-    "colors.filetypes": ["*"],
+    "colors.filetypes": [
+        "*"
+    ],
     "python.jediEnabled": false,
     "diagnostic.enable": true,
     "diagnostic.enableHighlightLineNumber": true,
@@ -25,5 +27,6 @@
     },
     "coc.preferences.formatOnSaveFiletypes": [
         "*"
-    ]
+    ],
+    "pullDiagnostic.onSave": true
 }
