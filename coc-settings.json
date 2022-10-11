@@ -1,5 +1,29 @@
 {
+    "colors.filetypes": ["*"],
     "python.jediEnabled": false,
-    "coc.preferences.colorSupport": false,
-    "diagnostic.displayByAle": true
+    "diagnostic.enable": true,
+    "diagnostic.enableHighlightLineNumber": true,
+    "diagnostic.level": "warning",
+    "diagnostic.displayByAle": false,
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.work",
+                "go.mod",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "filetypes": [
+                "go"
+            ],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
+        }
+    },
+    "coc.preferences.formatOnSaveFiletypes": [
+        "*"
+    ]
 }

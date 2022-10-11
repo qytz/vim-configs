@@ -20,12 +20,10 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 " View and search LSP symbols, tags in Vim/NeoVim.
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 " like tagbar, but for markdown and rest etc.
-Plug 'vim-voom/VOoM'
+" Plug 'vim-voom/VOoM'
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
-" nerdcommenter should be after vim-cscope-utils, the have key map conficts
-Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -71,19 +69,15 @@ Plug 'tmsvg/pear-tree'
 Plug 'editorconfig/editorconfig-vim'
 
 " async syntastic
-Plug 'w0rp/ale'
-if has('python3')
-    if has('nvim')
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    else
-        " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-        " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-    endif
+" Plug 'w0rp/ale'
+if has('nvim')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 else
-    Plug 'maralla/completor.vim'
+    " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 Plug 'Valloric/MatchTagAlways'
@@ -103,27 +97,30 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'posva/vim-vue'
+" Plug 'posva/vim-vue'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
 Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
-Plug 'rking/ag.vim'
+" Plug 'rking/ag.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'szw/vim-ctrlspace'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'dyng/ctrlsf.vim'
+" Plug 'dyng/ctrlsf.vim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
+if has('patch-8.1.2114')
+    Plug 'liuchengxu/vim-clap'
+endif
 
 " Vim script for text filtering and alignment
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 
 " edit ipython notebook
 Plug 'goerz/jupytext.vim'
 
 " The interactive scratchpad for hackers.
-Plug 'metakirby5/codi.vim'
+" Plug 'metakirby5/codi.vim'
 
 " True Sublime Text style multiple selections for Vim
 " Plug 'terryma/vim-multiple-cursors'
@@ -147,7 +144,7 @@ Plug 'gyim/vim-boxdraw'
 
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'gregsexton/MatchTag'
-Plug 'vim-scripts/vst_with_syn'
+" Plug 'vim-scripts/vst_with_syn'
 
 " input method fuzzy
 " Plug 'qytz/vim-barbaric'
