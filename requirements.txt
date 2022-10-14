@@ -12,6 +12,7 @@ pyls-isort
 notedown
 
 # coc completeor
+:CocInstall coc-snippets
 ## python
 :CocInstall coc-pyright
 :CocInstall coc-python
@@ -36,7 +37,7 @@ notedown
 :CocInstall coc-eslint coc-tsserver coc-vetur
 # other
 :CocInstall coc-cmake
-:CocInstall coc-yank coc-lists coc-snippets
+:CocInstall coc-yank coc-lists
 :CocInstall coc-marketplace
 # may have performace problem
 :CocInstall coc-hightlight

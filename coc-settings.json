@@ -1,32 +1,33 @@
 {
-    "colors.filetypes": [
-        "*"
-    ],
-    "python.jediEnabled": false,
-    "diagnostic.enable": true,
-    "diagnostic.enableHighlightLineNumber": true,
-    "diagnostic.level": "warning",
-    "diagnostic.displayByAle": false,
-    "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.work",
-                "go.mod",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
-            "filetypes": [
-                "go"
-            ],
-            "initializationOptions": {
-                "usePlaceholders": true
-            }
-        }
-    },
-    "coc.preferences.formatOnSaveFiletypes": [
-        "*"
-    ],
-    "pullDiagnostic.onSave": true
+  "colors.filetypes": [
+    "*"
+  ],
+  "python.jediEnabled": false,
+  "diagnostic.enable": true,
+  "diagnostic.enableHighlightLineNumber": true,
+  "diagnostic.level": "warning",
+  "diagnostic.displayByAle": false,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": [
+        "go.work",
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "*"
+  ],
+  "suggest.noselect": false,
+  "suggest.removeDuplicateItems": true
 }

@@ -101,7 +101,9 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'posva/vim-vue'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" coc-snippets
+Plug 'honza/vim-snippets'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
 Plug 'solarnz/thrift.vim'
 " fuzzy file&buffer&str searching tools
