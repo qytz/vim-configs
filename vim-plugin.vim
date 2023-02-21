@@ -79,6 +79,7 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
+let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 " filetype detection, syntax highlighting, and indentation for Dart code in Vim
 Plug 'dart-lang/dart-vim-plugin'
@@ -96,13 +97,15 @@ Plug 'tpope/vim-endwise'
 " Plug 'jiangmiao/auto-pairs'
 " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'Raimondi/delimitMate'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
+
 " Plug 'posva/vim-vue'
-" Plug 'SirVer/ultisnips'
 " coc-snippets
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go'}
 Plug 'solarnz/thrift.vim'
@@ -115,7 +118,7 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
 if has('patch-8.1.2114')
-    Plug 'liuchengxu/vim-clap'
+    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 endif
 
 " Vim script for text filtering and alignment
@@ -156,4 +159,9 @@ Plug 'gregsexton/MatchTag'
 " Plug 'christoomey/vim-tmux-navigator'
 " Add plugins to &runtimepath
 " Plug 'brglng/vim-im-select'
+
+" Vim plugin that shows keybindings in popup
+" On-demand lazy load
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 call plug#end()
