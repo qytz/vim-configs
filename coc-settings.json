@@ -5,7 +5,36 @@
   "diagnostic.enableHighlightLineNumber": true,
   "diagnostic.level": "warning",
   "diagnostic.displayByAle": false,
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnType": true,
+  "suggest.noselect": false,
+  "suggest.removeDuplicateItems": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true,
+  "pyright.enable": true,
+  "python.formatting.provider": "black",
   "languageserver": {
+    "python": {
+      "filetypes": [
+        "python"
+      ],
+      "rootPatterns": [
+        ".git",
+        ".env",
+        "venv",
+        ".venv",
+        "setup.cfg",
+        "setup.py",
+        "pyproject.toml",
+        "pyrightconfig.json"
+      ]
+    },
     "golang": {
       "command": "gopls",
       "rootPatterns": [
@@ -21,18 +50,53 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": [
+        "c",
+        "cpp",
+        "cuda",
+        "objc",
+        "objcpp"
+      ],
+      "rootPatterns": [
+        ".clang",
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        }
+      }
+    },
+    "java": {
+      "command": "jdtls",
+      "filetypes": [
+        "java",
+        "class"
+      ],
+      "rootPatterns": [
+        "maven",
+        ".git",
+        ".vim"
+      ]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ],
+      "ignoredRootPaths": [
+        "~"
+      ]
     }
-  },
-  "coc.preferences.formatOnSave": true,
-  "coc.preferences.formatOnType": true,
-  "suggest.noselect": false,
-  "suggest.removeDuplicateItems": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "prettier.disableSuccessMessage": true
+  }
 }

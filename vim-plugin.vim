@@ -80,7 +80,7 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-python", "coc-json", "coc-java", "coc-go", "coc-flutter" ]
+let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-pyright", "coc-json", "coc-java", "coc-go", "coc-flutter" ]
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
 endif
