@@ -79,7 +79,15 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+
+let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-python", "coc-json", "coc-java", "coc-go", "coc-flutter" ]
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 
 " filetype detection, syntax highlighting, and indentation for Dart code in Vim
 Plug 'dart-lang/dart-vim-plugin'
@@ -97,10 +105,10 @@ Plug 'tpope/vim-endwise'
 " Plug 'jiangmiao/auto-pairs'
 " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'Raimondi/delimitMate'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
 " Plug 'posva/vim-vue'

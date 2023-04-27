@@ -1,7 +1,5 @@
 {
-  "colors.filetypes": [
-    "*"
-  ],
+  "colors.enable": true,
   "python.jediEnabled": false,
   "diagnostic.enable": true,
   "diagnostic.enableHighlightLineNumber": true,
@@ -25,9 +23,16 @@
       }
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": [
-    "*"
-  ],
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnType": true,
   "suggest.noselect": false,
-  "suggest.removeDuplicateItems": true
+  "suggest.removeDuplicateItems": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true
 }
