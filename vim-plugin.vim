@@ -172,4 +172,7 @@ Plug 'gregsexton/MatchTag'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
+" live server
+Plug 'manzeloth/live-server'
+
 call plug#end()
