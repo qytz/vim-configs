@@ -20,10 +20,9 @@
   "pyright.enable": true,
   "python.formatting.provider": "black",
   "languageserver": {
-    "python-lsp-server": {
-      "filetypes": [
-        "python"
-      ],
+    "python": {
+      "command": "pyright",
+      "filetypes": ["python"],
       "rootPatterns": [
         ".git",
         ".env",
@@ -37,43 +36,22 @@
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.work",
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ],
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
       "initializationOptions": {
         "usePlaceholders": true
       }
     },
     "java": {
       "command": "jdtls",
-      "filetypes": [
-        "java",
-        "class"
-      ],
-      "rootPatterns": [
-        "maven",
-        ".git",
-        ".vim"
-      ]
+      "filetypes": ["java", "class"],
+      "rootPatterns": ["maven", ".git", ".vim"]
     },
     "bash": {
       "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
-      ]
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
 }
