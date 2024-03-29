@@ -1,4 +1,5 @@
 {
+  "http.proxyStrictSSL": false,
   "colors.enable": true,
   "python.jediEnabled": false,
   "diagnostic.enable": true,
@@ -19,10 +20,16 @@
   "prettier.disableSuccessMessage": true,
   "pyright.enable": true,
   "python.formatting.provider": "black",
+  "python.linting.ruffEnabled": true,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportOptionalMemberAccess": "information"
+  },
   "languageserver": {
     "python": {
       "command": "pyright",
-      "filetypes": ["python"],
+      "filetypes": [
+        "python"
+      ],
       "rootPatterns": [
         ".git",
         ".env",
@@ -36,22 +43,44 @@
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
+      "rootPatterns": [
+        "go.work",
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ],
       "initializationOptions": {
         "usePlaceholders": true
       }
     },
     "java": {
       "command": "jdtls",
-      "filetypes": ["java", "class"],
-      "rootPatterns": ["maven", ".git", ".vim"]
+      "filetypes": [
+        "java",
+        "class"
+      ],
+      "rootPatterns": [
+        "maven",
+        ".git",
+        ".vim"
+      ]
     },
     "bash": {
       "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ],
+      "ignoredRootPaths": [
+        "~"
+      ]
     }
-  }
+  },
+  "svelte.enable-ts-plugin": false
 }

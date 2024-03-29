@@ -80,7 +80,8 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-pyright", "coc-json", "coc-java", "coc-go", "coc-flutter", "coc-clangd" ]
+Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
+let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-pyright", "@yaegassy/coc-ruff", "coc-json", "coc-java", "coc-go", "coc-flutter", "coc-clangd" ]
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
 endif
@@ -172,7 +173,5 @@ Plug 'gregsexton/MatchTag'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
-" live server
-Plug 'manzeloth/live-server'
-
+Plug 'Exafunction/codeium.vim'
 call plug#end()
