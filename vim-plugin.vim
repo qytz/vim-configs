@@ -70,25 +70,29 @@ Plug 'editorconfig/editorconfig-vim'
 
 " async syntastic
 Plug 'w0rp/ale'
-if has('nvim')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-else
-    " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+" if has('nvim')
+"     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" else
+"     " coc.nvim need yarn global add vim-node-rpc (https://github.com/neoclide/vim-node-rpc)
+"     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif
 
-Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-pyright", "@yaegassy/coc-ruff", "coc-json", "coc-java", "coc-go", "coc-flutter", "coc-clangd" ]
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif
+" Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
+" let g:coc_global_extensions = [ "coc-tsserver", "coc-eslint", "coc-yaml", "coc-pyright", "@yaegassy/coc-ruff", "coc-json", "coc-java", "coc-go", "coc-flutter", "coc-clangd" ]
+" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+"   let g:coc_global_extensions += ['coc-prettier']
+" endif
+"
+" if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+"   let g:coc_global_extensions += ['coc-eslint']
+" endif
 
 " filetype detection, syntax highlighting, and indentation for Dart code in Vim
 Plug 'dart-lang/dart-vim-plugin'

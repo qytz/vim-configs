@@ -30,7 +30,7 @@ set encoding=utf8
 set fileencoding=utf8
 " detect file encodings list below:
 " gb18030 should be before UTF-8
-set fileencodings=utf-8,gb18030,default
+set fileencodings=utf-8,gb18030,utf-16le,default
 set formatoptions-=o "dont continue comments when pushing o/O
 " Vim 支持在编辑文本时自动折行，但默认对中文折行的支持并不理想，建议添加如下两个设置：
 " 如遇 Unicode 值大于 255 的文本，不必等到空格再折行。
