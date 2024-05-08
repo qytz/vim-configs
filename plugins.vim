@@ -69,7 +69,7 @@ Plug 'tmsvg/pear-tree'
 Plug 'editorconfig/editorconfig-vim'
 
 " async syntastic
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -154,6 +154,9 @@ Plug 'mattn/emmet-vim'
 Plug 'terryma/vim-expand-region'
 " Ultimate hex editing system with Vim
 Plug 'Shougo/vinarise.vim'
+
+Plug 'mattn/vim-sonictemplate'
+Plug 'mattn/vim-notification'
 
 Plug 'tpope/vim-surround'
 "Plug 'kchmck/vim-coffee-script'

@@ -1,5 +1,5 @@
 "source ~/.vim/vundles.vim
-source ~/.vim/vim-plugin.vim
+source ~/.vim/plugins.vim
 "source ~/.vim/neobundle.vim
 filetype plugin indent on
 for fname in split(glob('~/.vim/configs/*.vim'), '\n')

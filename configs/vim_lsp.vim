@@ -19,6 +19,7 @@ function! s:on_lsp_buffer_enabled() abort
     " nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 
     let g:lsp_format_sync_timeout = 3000
+    autocmd! BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')
     autocmd! BufWritePre *.rs,*.go,*.py,*.js,*.ts,*.vue call execute('LspDocumentFormatSync')
 
     " refer to doc to add more commands
@@ -30,4 +31,20 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+set foldmethod=expr
+  \ foldexpr=lsp#ui#vim#folding#foldexpr()
+  \ foldtext=lsp#ui#vim#folding#foldtext()
+
 let g:lsp_settings_filetype_vue = ['typescript-language-server', 'volar-server']
+" let g:lsp_tagfunc_source_methods = ['definition', 'declaration', 'implementation', 'typeDefinition']
+let g:lsp_tagfunc_source_methods = ['definition' ]
+
+" let g:lsp_settings_filetype_python = ['pylsp-all', 'ruff-lsp']
+" let g:lsp_settings = {
+" \   'filetype': {'python': 'pylsp-all'},
+" \   'pylsp': {
+" \             'plugins': {
+" \                 'black': {'enabled': v:true},
+" \             },
+" \   },
+" \ }
