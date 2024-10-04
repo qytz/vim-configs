@@ -19,8 +19,10 @@ function! s:on_lsp_buffer_enabled() abort
     " nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 
     let g:lsp_format_sync_timeout = 3000
-    autocmd! BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')
-    autocmd! BufWritePre *.rs,*.go,*.py,*.js,*.ts,*.vue call execute('LspDocumentFormatSync')
+    " autocmd! BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')
+    autocmd! BufWritePre *.rs,*.go,*.py,*.js <buffer> call execute('LspCodeActionSync source.organizeImports')
+    autocmd! BufWritePre *.ts,*.vue <buffer> call execute('LspCodeActionSync source.organizeImports.ts')
+    autocmd! BufWritePre *.rs,*.go,*.py,*.js,*.ts,*.vue,*.c,*.cpp,*.h,*.hpp call execute('LspDocumentFormatSync')
 
     " refer to doc to add more commands
 endfunction
@@ -41,10 +43,16 @@ let g:lsp_tagfunc_source_methods = ['definition' ]
 
 " let g:lsp_settings_filetype_python = ['pylsp-all', 'ruff-lsp']
 " let g:lsp_settings = {
-" \   'filetype': {'python': 'pylsp-all'},
-" \   'pylsp': {
+" \   'pylsp-all': {
 " \             'plugins': {
-" \                 'black': {'enabled': v:true},
+" \                 'black': {
+" \                      'enabled': v:true,
+" \                      'line-length': 120,
+" \                      'max-line-length': 120,
+" \                  },
+" \                 'pycodestyle': {
+" \                      'max-line-length': 120,
+" \                  },
 " \             },
 " \   },
 " \ }
