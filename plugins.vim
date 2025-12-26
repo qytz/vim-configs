@@ -180,5 +180,5 @@ Plug 'gregsexton/MatchTag'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
-Plug 'Exafunction/codeium.vim'
+" Plug 'Exafunction/codeium.vim'
 call plug#end()

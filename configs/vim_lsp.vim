@@ -41,6 +41,7 @@ let g:lsp_settings_filetype_vue = ['typescript-language-server', 'volar-server']
 " let g:lsp_tagfunc_source_methods = ['definition', 'declaration', 'implementation', 'typeDefinition']
 let g:lsp_tagfunc_source_methods = ['definition' ]
 
+let g:lsp_settings_filetype_python = ['ty', 'ruff']
 " let g:lsp_settings_filetype_python = ['pylsp-all', 'ruff-lsp']
 " let g:lsp_settings = {
 " \   'pylsp-all': {
